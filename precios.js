@@ -4,9 +4,9 @@ window.PRECIOS = {
     "subtitulo": "Una agencia de viajes con las cuentas abiertas",
     "equipo": "",
     "integrantes": [
-      "",
-      "",
-      ""
+      "Sebastián Bañoz González",
+      "Saúl Alexander Moreno Cardona",
+      "Alejandro Montes Domínguez"
     ],
     "fechaConsulta": "22 de octubre de 2026",
     "fechaConsultaISO": "2026-10-22",
@@ -3317,18 +3317,18 @@ window.PRECIOS = {
     "equipo": "",
     "roles": [
       {
-        "rol": "Dirección del proyecto",
+        "rol": "Integrante",
         "nombre": ""
       },
       {
-        "rol": "Investigación y modelo de costos",
+        "rol": "Integrante",
         "nombre": ""
       },
       {
-        "rol": "Sitio y presentación",
+        "rol": "Integrante",
         "nombre": ""
       }
     ],
-    "nota": "El equipo escribe aquí sus nombres antes de publicar. El sitio no inventa integrantes ni iniciales."
+    "nota": "Nombres proporcionados por el equipo. Los roles internos y el nombre del equipo se definen en la presentación; el sitio no inventa nombres ni iniciales."
   }
 };

@@ -782,18 +782,21 @@
     const mini = $("[data-credits-mini]");
     if (mini) {
       if (nombres.length === 3) {
-        mini.innerHTML = `Equipo ${esc(team || "—")} · ${nombres.map(esc).join(" · ")}`;
+        mini.innerHTML = team
+          ? `Equipo ${esc(team)} · ${nombres.map(esc).join(" · ")}`
+          : nombres.map(esc).join(" · ");
       } else {
         mini.innerHTML = `Equipo <span class="blank"></span> · <span class="blank"></span> · <span class="blank"></span>`;
       }
     }
     const card = byId("credits-card");
     if (!card) return;
+    card.classList.toggle("no-team", !team);
     card.innerHTML = `
-      <div class="credits-team">
+      ${team ? `<div class="credits-team">
         <span class="label">Equipo</span>
-        <div class="name">${team ? esc(team) : '<span class="blank" aria-label="Nombre del equipo pendiente"></span>'}</div>
-      </div>
+        <div class="name">${esc(team)}</div>
+      </div>` : ""}
       <div class="credits-roles">
         ${DATA.creditos.roles.map((r, i) => `
           <div class="credits-role">

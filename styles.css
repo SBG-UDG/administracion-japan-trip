@@ -895,6 +895,7 @@ code {
 
 /* ---------- Créditos ---------- */
 .credits-card { background: var(--ink); color: var(--paper); padding: 1.4rem; display: grid; grid-template-columns: 1.2fr 2fr; gap: 1.5rem; }
+.credits-card.no-team { grid-template-columns: 1fr; }
 .credits-card .credits-team { border-right: 1px solid rgba(245,240,230,0.2); padding-right: 1.5rem; }
 .credits-card .credits-team .label { font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; color: #bfb09a; }
 .credits-card .credits-team .name { font-family: var(--serif); font-size: clamp(1.6rem, 2.8vw, 2.6rem); line-height: 1.05; margin-top: 0.3rem; }

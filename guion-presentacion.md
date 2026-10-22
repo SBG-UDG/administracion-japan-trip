@@ -1,6 +1,7 @@
 # Guion de presentación — Tokio en 15 días
 
 **Formato:** sitio web en vivo + respaldo PDF.
+**Integrantes:** Sebastián Bañoz González · Saúl Alexander Moreno Cardona · Alejandro Montes Domínguez.
 **Equipo:** 3 integrantes. **Nadie habla más de 3:20 ni menos de 2:20.**
 **Objetivo real:** aterrizar en **8–9 minutos** de exposición. Si el profesor cuenta el Q&A dentro de los 10, recorten a **7 minutos** de exposición y dejen 3 para preguntas.
 

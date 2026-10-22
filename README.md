@@ -162,15 +162,10 @@ Verificación después de publicar:
 
 ## 8. Créditos
 
-El bloque de créditos está preparado en el sitio y en `precios.js`. Para completarlo:
+El bloque de créditos ya tiene los nombres del equipo:
 
-```js
-// precios.js
-"meta": {
-  "equipo": "Nombre del equipo",
-  "integrantes": ["Nombre 1", "Nombre 2", "Nombre 3"],
-  ...
-}
-```
+- Sebastián Bañoz González
+- Saúl Alexander Moreno Cardona
+- Alejandro Montes Domínguez
 
-No se usaron nombres inventados ni iniciales.
+Están en `precios.js` → `meta.integrantes`. El **nombre del equipo** quedó vacío porque no se proporcionó; se escribe en `meta.equipo` y aparece en la portada y en el bloque de créditos. No se inventaron nombres ni iniciales.
