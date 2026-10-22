@@ -1,0 +1,45 @@
+name: Publicar sitio en GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Pages (lo habilita si aún no existe)
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Preparar solo los archivos públicos
+        run: |
+          mkdir -p sitio-publicado
+          cp index.html styles.css app.js precios.js anexo.html anexo.css anexo.js .nojekyll sitio-publicado/
+          cp -r assets respaldo sitio-publicado/
+
+      - name: Empaquetar el sitio estático
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: sitio-publicado
+
+      - name: Publicar
+        id: deployment
+        uses: actions/deploy-pages@v4

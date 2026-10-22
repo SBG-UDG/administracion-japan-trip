@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Tokio en 15 días">
+  <rect width="64" height="64" fill="#f5f0e6"/>
+  <circle cx="32" cy="32" r="27" fill="#b52d22"/>
+  <text x="32" y="43" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#fffdf8">東</text>
+</svg>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tokio en 15 días · Tres presupuestos y un Asian Tour</title>
+  <meta name="description" content="Tokio, 15 días con base fija, para 3 adultos y 1 niño de 12 años. Tres niveles de presupuesto y un Asian Tour de cinco ciudades, con cada cifra y cada fuente a la vista.">
+  <meta name="theme-color" content="#14110e">
+  <meta property="og:title" content="Tokio en 15 días · Tres presupuestos y un Asian Tour">
+  <meta property="og:description" content="Un sitio de venta con las cuentas abiertas: turista, clase media, clase alta y Asian Tour.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#inicio" aria-label="Tokio en 15 días, ir al inicio">
+      <span class="brand-mark" aria-hidden="true">東</span>
+      <span class="brand-text">
+        <strong>Tokio en 15 días</strong>
+        <small>Una agencia con las cuentas abiertas</small>
+      </span>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" data-menu>Menú</button>
+    <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+      <a href="#paquete">Paquetes</a>
+      <a href="#comparador">Comparador</a>
+      <a href="#transparencia">Las cuentas</a>
+      <a href="#plan-asia">Asia Tour</a>
+      <a href="#fuentes">Fuentes</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <button class="btn btn-ghost print-btn" type="button" data-print>Imprimir / PDF</button>
+  </header>
+
+  <main id="contenido">
+    <!-- HERO -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="hero-seal">東京</span>
+        <span class="hero-vertical">十五日 · 日本</span>
+        <svg class="hero-line" viewBox="0 0 900 420" role="presentation">
+          <path d="M30 330 C 220 40, 520 390, 860 80" fill="none" stroke="currentColor" stroke-width="1.2"/>
+          <circle cx="30" cy="330" r="5" fill="currentColor"/>
+          <circle cx="860" cy="80" r="5" fill="currentColor"/>
+        </svg>
+      </div>
+
+      <div class="hero-inner">
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Tokio · 15 días · 3 adultos + 1 niño de 12</p>
+        <h1 id="hero-title">Tokio, quince días.<br><em>Tres formas de llegar.</em><br>Una de ir más lejos.</h1>
+        <p class="hero-lead">Un viaje con base fija en Tokio, salidas de un día y un plan extra de cinco ciudades. Sin fotos de stock, sin cifras redondas y sin esconder la letra chica: el vuelo más barato, la habitación que existe y el niño que ya paga como adulto.</p>
+
+        <div class="hero-price" aria-label="Precio de entrada">
+          <div class="hero-price-main">
+            <span class="price-label">Desde</span>
+            <strong>$25,000</strong>
+            <span class="price-unit">MXN por persona<br><small>en destino</small></span>
+          </div>
+          <div class="hero-price-side">
+            <p><b>+ $20,010</b> de vuelo redondo</p>
+            <p><b>$86,845</b> el grupo de 4, solo terreno</p>
+            <p class="tiny">Tres adultos + un niño. No es un promedio.</p>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#paquete" data-scroll-product>Ver los cuatro paquetes</a>
+          <a class="btn btn-ghost" href="#transparencia">Auditar las cuentas</a>
+        </div>
+
+        <div class="hero-meta">
+          <span><b>Salida</b> Guadalajara (GDL)</span>
+          <span><b>Ventana</b> 15 feb – 1 mar 2027</span>
+          <span><b>Consulta</b> 22 oct 2026</span>
+          <span><b>TC</b> ¥1 = $0.1165</span>
+        </div>
+
+        <p class="hero-credits" data-credits-mini>Equipo <span class="blank"></span> · <span class="blank"></span> · <span class="blank"></span></p>
+      </div>
+    </section>
+
+    <!-- SELECTOR + PRODUCTO -->
+    <section class="selector-section" id="paquete" aria-labelledby="selector-title">
+      <div class="section-head">
+        <p class="section-num">01</p>
+        <div>
+          <h2 id="selector-title">Elige un presupuesto. El sitio se reescribe.</h2>
+          <p class="section-sub">Cuatro productos cerrados. Cambia el nivel y se actualizan itinerario, hospedaje, vuelos, actividades, precio por adulto, precio del niño, total del grupo y costo por día. La opción activa queda en la URL.</p>
+        </div>
+      </div>
+
+      <div class="selector-wrap">
+        <div class="budget-tabs" role="tablist" aria-label="Niveles de presupuesto">
+          <button class="budget-tab" role="tab" id="tab-turista" aria-controls="producto" aria-selected="false" data-product="turista">
+            <span class="tab-num">01</span>
+            <span class="tab-name">Turista</span>
+            <span class="tab-price">$25,000 <small>terreno</small></span>
+          </button>
+          <button class="budget-tab" role="tab" id="tab-media" aria-controls="producto" aria-selected="false" data-product="media">
+            <span class="tab-num">02</span>
+            <span class="tab-name">Clase media</span>
+            <span class="tab-price">$75,000 <small>todo incluido</small></span>
+          </button>
+          <button class="budget-tab" role="tab" id="tab-alta" aria-controls="producto" aria-selected="false" data-product="alta">
+            <span class="tab-num">03</span>
+            <span class="tab-name">Clase alta</span>
+            <span class="tab-price">$150,000 <small>todo incluido</small></span>
+          </button>
+          <button class="budget-tab" role="tab" id="tab-asia" aria-controls="producto" aria-selected="false" data-product="asia">
+            <span class="tab-num">04</span>
+            <span class="tab-name">Asia tour</span>
+            <span class="tab-price">$150,000 <small>21 días</small></span>
+          </button>
+        </div>
+        <div class="selector-tools">
+          <span class="selector-state" data-selector-state>Viendo: Turista</span>
+          <button class="link-btn" type="button" data-copy-link>Copiar enlace de este nivel</button>
+        </div>
+      </div>
+
+      <div id="producto" class="product" role="tabpanel" aria-labelledby="tab-turista"></div>
+      <p class="sr-only" id="anuncio" aria-live="polite"></p>
+    </section>
+
+    <!-- COMPARADOR -->
+    <section class="section compare-section" id="comparador" aria-labelledby="compare-title">
+      <div class="section-head">
+        <p class="section-num">02</p>
+        <div>
+          <h2 id="compare-title">Los cuatro, lado a lado.</h2>
+          <p class="section-sub">La diferencia no es “otro hotel”. Es cuántas salidas entran, qué se paga, cómo se duerme y cuánto tiempo se compra. La columna del nivel activo queda marcada.</p>
+        </div>
+      </div>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Tabla comparativa de los cuatro paquetes, desplazable horizontalmente">
+        <table class="compare-table" id="compare-table">
+          <caption class="sr-only">Comparación de los paquetes Turista, Clase media, Clase alta y Asian Tour</caption>
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="table-note">Turista se publica en dos alcances: solo terreno y con vuelo. Los otros tres son todo incluido. El costo por día es el promedio del grupo de 4, no el precio de lista.</p>
+    </section>
+
+    <!-- TRANSPARENCIA -->
+    <section class="section ledger-section" id="transparencia" aria-labelledby="ledger-title">
+      <div class="section-head">
+        <p class="section-num">03</p>
+        <div>
+          <h2 id="ledger-title">La aritmética, sin caja negra.</h2>
+          <p class="section-sub">Cada rubro tiene monto, factor infantil, fuente y fecha. La suma de rubros da el total; el total se descompone en 3 adultos + 1 niño; el costo por día sale de dividir entre días y viajeros. Si un número no cuadra, se corrige antes de publicarlo.</p>
+        </div>
+      </div>
+      <div id="ledger" class="ledger"></div>
+
+      <div class="all-totals">
+        <div class="all-totals-head">
+          <h3>Todos los totales, en una tabla</h3>
+          <a class="btn btn-ghost" href="./anexo.html">Anexo imprimible de fuentes y modelo</a>
+        </div>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de totales de los cuatro paquetes, desplazable horizontalmente">
+          <table class="totals-table" id="totals-table">
+            <caption class="sr-only">Totales por producto: adulto, niño, grupo y costo por día</caption>
+            <thead></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ASIA -->
+    <section class="section asia-section" id="plan-asia" aria-labelledby="asia-title">
+      <div class="section-head">
+        <p class="section-num">04</p>
+        <div>
+          <h2 id="asia-title">Asian Tour: cinco ciudades, un solo sentido.</h2>
+          <p class="section-sub">Tokio → Seúl → Bangkok → Hanói → Singapur. Cinco ciudades en cinco países, con regreso desde la última: un billete de extremos abiertos (<em>open jaw</em>), no una ida y vuelta a Tokio. La lista no se recorta; si la aritmética no cabe, se ajustan noches, hotel y clase de vuelo.</p>
+        </div>
+      </div>
+
+      <div class="asia-grid">
+        <div class="asia-map-card">
+          <div class="asia-map-head">
+            <span class="kicker">Ruta en un solo sentido</span>
+            <span class="asia-band">$135,000–$165,000 pp</span>
+          </div>
+          <svg class="asia-map" viewBox="0 0 820 440" role="img" aria-labelledby="asia-map-title asia-map-desc">
+            <title id="asia-map-title">Ruta del Asian Tour: Tokio, Seúl, Bangkok, Hanói y Singapur</title>
+            <desc id="asia-map-desc">Diagrama esquemático con cinco nodos numerados en el orden Tokio, Seúl, Bangkok, Hanói y Singapur, con las noches en cada ciudad.</desc>
+            <path class="asia-route-shadow" d="M690 108 C 650 70, 610 62, 590 78 C 560 104, 540 170, 500 196 C 450 230, 390 220, 360 252 C 330 284, 340 330, 315 356" />
+            <path class="asia-route" d="M690 108 C 650 70, 610 62, 590 78 C 560 104, 540 170, 500 196 C 450 230, 390 220, 360 252 C 330 284, 340 330, 315 356" />
+            <g class="asia-node" transform="translate(690,108)">
+              <circle r="24"/><text class="asia-node-n" y="5">01</text><text class="asia-node-city" y="44">Tokio</text><text class="asia-node-nights" y="60">6 noches</text>
+            </g>
+            <g class="asia-node" transform="translate(590,78)">
+              <circle r="22"/><text class="asia-node-n" y="5">02</text><text class="asia-node-city" y="42">Seúl</text><text class="asia-node-nights" y="58">4 noches</text>
+            </g>
+            <g class="asia-node" transform="translate(360,252)">
+              <circle r="22"/><text class="asia-node-n" y="5">03</text><text class="asia-node-city" y="42">Bangkok</text><text class="asia-node-nights" y="58">4 noches</text>
+            </g>
+            <g class="asia-node" transform="translate(500,196)">
+              <circle r="22"/><text class="asia-node-n" y="5">04</text><text class="asia-node-city" y="42">Hanói</text><text class="asia-node-nights" y="58">4 noches</text>
+            </g>
+            <g class="asia-node" transform="translate(315,356)">
+              <circle r="22"/><text class="asia-node-n" y="5">05</text><text class="asia-node-city" y="42">Singapur</text><text class="asia-node-nights" y="58">2 noches</text>
+            </g>
+          </svg>
+          <p class="asia-map-caption">El orden es el producto: no se reordena para ahorrar. El zigzag se acepta.</p>
+          <div class="asia-cities" id="asia-cities"></div>
+        </div>
+
+        <div class="asia-summary" id="asia-summary"></div>
+      </div>
+
+      <div class="gain-loss">
+        <div class="gain-loss-head">
+          <h3>Lo que se gana / lo que se pierde</h3>
+          <p>Contra la clase alta, que cuesta lo mismo por adulto pero se queda en Tokio. No es un <em>upgrade</em>: es otro producto.</p>
+        </div>
+        <div class="gain-loss-grid" id="gain-loss"></div>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Tabla numérica de comparación entre clase alta y Asian Tour, desplazable horizontalmente">
+          <table class="asia-table" id="asia-table">
+            <caption class="sr-only">Comparación numérica entre clase alta y Asian Tour</caption>
+            <thead><tr><th>Indicador</th><th>Clase alta</th><th>Asian Tour</th><th>Diferencia</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="asia-visas" id="asia-visas"></div>
+    </section>
+
+    <!-- RIESGOS -->
+    <section class="section risks-section" id="riesgos" aria-labelledby="risks-title">
+      <div class="section-head">
+        <p class="section-num">05</p>
+        <div>
+          <h2 id="risks-title">Riesgos, política y letra chica.</h2>
+          <p class="section-sub">Lo que puede salir mal y lo que hacemos. Un paquete que no explica sus riesgos no es un paquete: es una promesa.</p>
+        </div>
+      </div>
+      <div class="risk-grid" id="risk-grid"></div>
+      <div class="policy">
+        <div>
+          <h3>Política de pago y cancelación</h3>
+          <ul>
+            <li><b>30%</b> al firmar: congela la tarifa aérea y reserva los hoteles.</li>
+            <li><b>70%</b> a 30 días de la salida.</li>
+            <li>Cancelación con más de 60 días: <b>80%</b> de la parte terrestre. Entre 30 y 60 días: <b>50%</b>. Menos de 30 días: <b>0%</b>. Vuelos, según la tarifa de la aerolínea.</li>
+            <li>Cambios de fecha o nombre: <b>$1,500</b> por persona más la diferencia de tarifa, antes de emitir.</li>
+            <li>Precio en pesos. La parte terrestre se recalcula con el FIX de Banxico del día de pago, con tope de 10%.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Documentos y menores</h3>
+          <ul>
+            <li>Pasaporte vigente al menos 6 meses después del regreso.</li>
+            <li>Japón: sin visa para pasaporte mexicano (90 días). <em>Visit Japan Web</em> recomendado.</li>
+            <li>El niño de 12 viaja con ambos padres. Si viaja con uno solo, se requiere carta notarial de autorización del otro.</li>
+            <li>Asia: K-ETA, visa tailandesa y e-visa Vietnam. La visa tailandesa se tramita antes de comprar los vuelos.</li>
+            <li>Seguro de viaje obligatorio para los cuatro; el paquete incluye una póliza básica o premium según el nivel.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FUENTES -->
+    <section class="section sources-section" id="fuentes" aria-labelledby="sources-title">
+      <div class="section-head">
+        <p class="section-num">06</p>
+        <div>
+          <h2 id="sources-title">Fuentes, fecha y para qué se usó cada una.</h2>
+          <p class="section-sub">Una cifra sin fuente es una opinión. Cada tarifa, entrada, visa y tipo de cambio tiene URL y fecha de consulta. Los enlaces se abren en otra pestaña; el sitio funciona sin red porque no depende de ellos.</p>
+        </div>
+      </div>
+      <div class="sources-tools">
+        <label for="fuente-busqueda">Buscar en las fuentes</label>
+        <input id="fuente-busqueda" type="search" placeholder="Banxico, visa, Disney, vuelo…" autocomplete="off">
+        <span class="sources-count" data-sources-count></span>
+      </div>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de fuentes, desplazable horizontalmente">
+        <table class="sources-table" id="sources-table">
+          <caption class="sr-only">Fuentes consultadas, con URL, fecha y uso</caption>
+          <thead><tr><th>#</th><th>Grupo</th><th>Fuente</th><th>Consulta</th><th>Para qué se usó</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section" id="faq" aria-labelledby="faq-title">
+      <div class="section-head">
+        <p class="section-num">07</p>
+        <div>
+          <h2 id="faq-title">Las preguntas que van a hacer.</h2>
+          <p class="section-sub">Respuestas cortas, con la cifra a la mano. Si la pregunta no está, se responde con el modelo de costos, no con una improvisación.</p>
+        </div>
+      </div>
+      <div class="faq-list" id="faq-list"></div>
+    </section>
+
+    <!-- CRÉDITOS -->
+    <section class="section credits-section" id="creditos" aria-labelledby="credits-title">
+      <div class="section-head">
+        <p class="section-num">08</p>
+        <div>
+          <h2 id="credits-title">Créditos del equipo.</h2>
+          <p class="section-sub">El único dato que no decide el agente: los nombres. El bloque está preparado para que el equipo los escriba antes de publicar.</p>
+        </div>
+      </div>
+      <div class="credits-card" id="credits-card"></div>
+      <p class="credits-note">Sitio construido con HTML, CSS y JavaScript locales. Sin fotos de stock, sin CDNs críticos y sin secretos. Tipografía del sistema, trazos propios y datos en <code>precios.js</code>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true">東</span>
+      <div>
+        <strong>Tokio en 15 días</strong>
+        <p>Propuesta de viaje · 3 adultos + 1 niño de 12 · salida desde Guadalajara</p>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <p>Tarifas consultadas el 22/10/2026 · TC ¥1 = $0.1165 MXN · USD 1 = $18.4253 MXN</p>
+      <p><a href="#inicio">Volver al inicio</a> · <a href="./anexo.html">Anexo imprimible</a></p>
+    </div>
+  </footer>
+
+  <noscript>
+    <div class="noscript">
+      <h2>El selector necesita JavaScript local</h2>
+      <p>Este sitio es 100% estático y no usa servidores. Para ver el selector y las cuentas, activa JavaScript. Mientras tanto, los precios por adulto son: Turista $25,000 (solo terreno; con vuelo $45,010), Clase media $75,000, Clase alta $150,000 y Asian Tour $150,000.</p>
+    </div>
+  </noscript>
+
+  <script src="./precios.js" defer></script>
+  <script src="./app.js" defer></script>
+</body>
+</html>
