@@ -212,7 +212,7 @@ window.PRECIOS = {
       "titulo": "Embajada Real de Tailandia en México · requisitos",
       "url": "https://mexico.thaiembassy.org/en/page/visa-process-to-apply?menu=641d1df30cb67479704c4783",
       "fecha": "22/10/2026",
-      "uso": "Desde el 15/09/2026 los mexicanos requieren visa tailandesa; solicitud por e-Visa al menos un mes antes."
+      "uso": "Desde el 15/09/2026 los mexicanos requieren visa tailandesa; solicitud por e-visa al menos un mes antes."
     },
     {
       "n": 22,
@@ -225,10 +225,10 @@ window.PRECIOS = {
     {
       "n": 23,
       "grupo": "Visas",
-      "titulo": "Vietnam · e-Visa oficial",
+      "titulo": "Vietnam · e-visa oficial",
       "url": "https://evisa.gov.vn/",
       "fecha": "22/10/2026",
-      "uso": "e-Visa de hasta 90 días: USD 25 una entrada / USD 50 múltiples."
+      "uso": "e-visa de hasta 90 días: USD 25 una entrada / USD 50 múltiples."
     },
     {
       "n": 24,
@@ -3203,12 +3203,12 @@ window.PRECIOS = {
         "pais": "Tailandia",
         "visa": "Sí: visa turística desde el 15/09/2026.",
         "costo": "USD 40 ≈ $737 MXN",
-        "tramite": "e-Visa; solicitar al menos 1 mes antes; estados de cuenta, reservas y vuelos. TDAC 3 días antes.",
+        "tramite": "e-visa; solicitar al menos 1 mes antes; estados de cuenta, reservas y vuelos. TDAC 3 días antes.",
         "fuente": 21
       },
       {
         "pais": "Vietnam",
-        "visa": "Sí: e-Visa de 90 días.",
+        "visa": "Sí: e-visa de 90 días.",
         "costo": "USD 25 ≈ $461 MXN",
         "tramite": "evisa.gov.vn; 3–5 días hábiles; una entrada.",
         "fuente": 23
@@ -3273,7 +3273,7 @@ window.PRECIOS = {
     },
     {
       "p": "¿Qué visa necesito para cada país?",
-      "r": "Japón: sin visa (90 días). Corea: sin visa, K-ETA si no se extiende la exención (KRW 10,000). Tailandia: visa obligatoria desde el 15/09/2026 (USD 40, e-Visa, al menos un mes antes). Vietnam: e-visa de 90 días (USD 25). Singapur: sin visa (30 días). Todo con fecha de consulta en la sección de fuentes."
+      "r": "Japón: sin visa (90 días). Corea: sin visa, K-ETA si no se extiende la exención (KRW 10,000). Tailandia: visa obligatoria desde el 15/09/2026 (USD 40, e-visa, al menos un mes antes). Vietnam: e-visa de 90 días (USD 25). Singapur: sin visa (30 días). Todo con fecha de consulta en la sección de fuentes."
     },
     {
       "p": "¿Cómo duermen cuatro?",

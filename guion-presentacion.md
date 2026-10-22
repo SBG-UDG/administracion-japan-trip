@@ -32,6 +32,8 @@
 
 **Regla dura:** el bloque más largo y el más corto no pueden diferir en más de 30 segundos. Si un bloque se pasa, se recorta contenido, no se acelera la voz.
 
+**Cálculo del guion:** 417 + 392 + 438 palabras ≈ 8:20 a 150 palabras por minuto. Es una estimación de lectura, no un ensayo: los dos ensayos cronometrados se hacen con la bitácora de la sección 8.
+
 ---
 
 ## 3. Bloque A — El problema y la propuesta (0:00–2:40)
