@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Japón · 15 días · tres formas de llegar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{
+  --paper:#f3efe7; --paper2:#eae4d9; --ink:#16130f; --muted:#6d6459; --line:#d5ccbd;
+  --red:#b5342a; --indigo:#1c2a44; --gold:#8a6d3b;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:#0e0d0b;color:var(--ink);font-family:var(--sans);overflow:hidden}
+#stage{position:absolute;top:0;left:0;width:1920px;height:1080px;transform-origin:top left}
+.slide{position:absolute;inset:0;width:1920px;height:1080px;background:var(--paper);display:none;
+  padding:88px 104px;overflow:hidden}
+.slide.active{display:block;animation:in .38s cubic-bezier(.2,.7,.2,1)}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.slide.active{animation:none}}
+
+.kicker{font-size:19px;letter-spacing:.24em;text-transform:uppercase;color:var(--red);font-weight:700}
+.h1{font-family:var(--serif);font-size:104px;line-height:.95;letter-spacing:-.02em;font-weight:600}
+.h2{font-family:var(--serif);font-size:62px;line-height:1.02;letter-spacing:-.015em;font-weight:600}
+.h3{font-family:var(--serif);font-size:40px;line-height:1.1;font-weight:600}
+.lead{font-size:29px;line-height:1.42;color:#332c24;max-width:1180px}
+.body{font-size:25px;line-height:1.5;color:#3a332b}
+.small{font-size:20px;line-height:1.45;color:var(--muted)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.rule{height:1px;background:var(--line);width:100%}
+.top{position:absolute;top:44px;left:104px;right:104px;display:flex;justify-content:space-between;
+  align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:14px}
+.top .l{font-size:16px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.top .r{display:none}
+.num{position:absolute;right:104px;bottom:38px;font-family:var(--mono);font-size:16px;color:#9a9184}
+.foot{position:absolute;left:104px;bottom:38px;font-size:16px;letter-spacing:.14em;text-transform:uppercase;color:#9a9184}
+.vside{position:absolute;right:104px;top:96px;writing-mode:vertical-rl;font-family:var(--sans);font-size:21px;
+  letter-spacing:.5em;text-transform:uppercase;color:var(--red);font-weight:600}
+
+/* cover */
+.cover{background:var(--paper);padding:0}
+.cover .inner{position:absolute;left:104px;top:132px;width:1240px}
+.cover .anchor{position:absolute;left:104px;bottom:250px;display:flex;gap:56px}
+.cover .anchor div b{display:block;font-family:var(--mono);font-size:34px;color:var(--ink)}
+.cover .anchor div span{display:block;font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+.cover .meta{position:absolute;left:104px;bottom:96px;display:flex;gap:64px;font-size:21px;color:#4a423a}
+.cover .meta b{display:block;font-size:15px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.cover .bar{position:absolute;left:0;bottom:0;width:100%;height:14px;background:var(--red)}
+
+/* statement */
+.statement .big{font-family:var(--serif);font-size:88px;line-height:1.03;letter-spacing:-.02em}
+.statement .big em{font-style:normal;color:var(--red)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:88px}
+.klist{list-style:none}
+.klist li{font-size:26px;line-height:1.38;padding:16px 0 16px 56px;border-bottom:1px solid var(--line);position:relative}
+.klist li:last-child{border-bottom:0}
+.klist .mk{position:absolute;left:0;top:20px;width:44px;color:var(--red);font-family:var(--mono);font-size:18px}
+.klist b{font-weight:600}
+
+/* compare */
+.ct-head{display:grid;grid-template-columns:340px 1fr 1fr 1fr;gap:0;padding-bottom:22px;border-bottom:2px solid var(--ink)}
+.ct-col{font-family:var(--mono);font-size:26px;padding-left:28px}
+.ct-head .ct-col b{display:block;font-family:var(--serif);font-size:34px;font-weight:600;margin-bottom:6px}
+.ct-head .ct-col span{font-family:var(--mono);font-size:30px;color:var(--red)}
+.ct-head .ct-col em{display:block;font-style:normal;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.ct-row{display:grid;grid-template-columns:340px 1fr 1fr 1fr;align-items:center;padding:15px 0;border-bottom:1px solid var(--line)}
+.ct-label{font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:#4c443a}
+.ct-foot{border-bottom:0;border-top:2px solid var(--ink);padding-top:18px}
+.ct-foot .ct-col{font-size:30px}
+.ct-foot2{border-bottom:0;padding-top:10px}
+.ct-foot2 .ct-col{color:var(--muted);font-size:22px}
+
+/* tier slide */
+.tier{display:grid;grid-template-columns:1fr 520px;gap:72px;align-items:start}
+.tier .promise{font-family:var(--serif);font-size:44px;line-height:1.16;color:#241f19;margin:18px 0 26px}
+.tier .sell{font-size:23px;line-height:1.5;color:#3c352d;max-width:900px}
+.spec{border-left:2px solid var(--red);padding-left:32px}
+.spec h4{font-size:15px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;font-weight:700}
+.spec p{font-size:23px;line-height:1.4;margin-bottom:22px;color:#332c24}
+.spec .daybox{margin-top:6px;border-top:1px solid var(--line);padding-top:16px}
+.spec .daybox .v{font-family:var(--mono);font-size:30px;color:var(--red)}
+.timeline{display:grid;grid-template-columns:repeat(5,1fr);grid-template-rows:repeat(3,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);margin-top:28px}
+.timeline .d{background:var(--paper);padding:13px 14px;display:flex;flex-direction:column;gap:4px;min-height:104px}
+.timeline .dn{font-family:var(--mono);font-size:15px;color:var(--red)}
+.timeline .dt{font-size:17px;line-height:1.24;color:#2f2922;font-weight:500}
+.timeline .dc{font-family:var(--mono);font-size:13px;color:#8b8175;margin-top:auto}
+
+/* budget */
+.legend{display:flex;flex-wrap:wrap;gap:26px;margin:26px 0 14px}
+.legend i{display:inline-block;width:16px;height:16px;margin-right:9px;vertical-align:-2px}
+.legend span{font-size:17px;color:#4c443a;letter-spacing:.04em}
+.brow{display:grid;grid-template-columns:260px 1fr 210px;align-items:center;gap:34px;padding:22px 0;border-bottom:1px solid var(--line)}
+.bname{font-family:var(--serif);font-size:34px}
+.bname span{display:block;font-family:var(--sans);font-size:16px;color:var(--muted);margin-top:4px;letter-spacing:.04em}
+.bbar{display:flex;height:64px;overflow:hidden}
+.seg{display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:15px;color:#f3efe7}
+.seg:nth-child(5){color:#2b2620}.seg:nth-child(6){color:#2b2620}.seg:nth-child(7){color:#2b2620}
+.btot{font-family:var(--mono);font-size:26px;text-align:right;color:var(--red)}
+
+/* route */
+.route{display:flex;align-items:flex-start;gap:0}
+.node{width:240px}
+.node .dot{width:14px;height:14px;background:var(--red);border-radius:50%;margin-bottom:18px}
+.node .city{font-family:var(--serif);font-size:38px;line-height:1}
+.node .cty{font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+.node .n{font-family:var(--mono);font-size:22px;margin-top:14px;color:var(--indigo)}
+.node .f{font-size:18px;color:#5a5147;margin-top:8px;line-height:1.35;padding-right:20px}
+.link{flex:1;border-top:1px dashed #b3a99a;margin-top:7px;text-align:center;font-family:var(--mono);font-size:12px;color:#8b8175;padding-top:9px;white-space:nowrap;letter-spacing:0}
+
+/* ledger */
+.ledger{border-top:2px solid var(--ink);margin-top:34px}
+.ledger .lrow{display:grid;grid-template-columns:380px 1fr 1fr;align-items:baseline;border-bottom:1px solid var(--line)}
+.ledger .lrow>div{padding:13px 0;font-size:25px}
+.ledger .lrow .la{color:#4c443a}
+.ledger .lrow .lv{font-family:var(--mono);font-size:23px;color:var(--ink)}
+.ledger .lrow .lv.win{color:var(--red)}
+.ledger .lhead{border-bottom:1px solid var(--line)}
+.ledger .lhead>div{padding:14px 0 10px;font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.ledger .lhead .lv{font-family:var(--sans);font-size:14px;letter-spacing:.2em;color:var(--muted)}
+.ledger .lhead .lv.hi{color:var(--red)}
+
+/* risk grid */
+.rgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:44px 56px;margin-top:44px}
+.rgrid .it h5{font-size:16px;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:10px}
+.rgrid .it p{font-size:21px;line-height:1.42;color:#332c24}
+.rgrid .it p b{font-family:var(--mono);font-weight:400;font-size:20px}
+
+/* sources */
+.src{columns:2;column-gap:72px;margin-top:34px}
+.src p{font-size:17px;line-height:1.45;margin-bottom:14px;color:#433b33;break-inside:avoid}
+.src b{font-family:var(--mono);font-size:15px;color:var(--muted);display:block}
+/* print / pdf */
+@media print{
+  @page{size:20in 11.25in;margin:0}
+  html,body{background:#fff;overflow:visible;height:auto}
+  #stage{position:static;transform:none!important;width:1920px;height:auto;left:auto!important;top:auto!important}
+  .slide{position:relative;display:block!important;width:1920px;height:1080px;page-break-after:always;break-after:page;animation:none!important}
+  .slide:last-child{page-break-after:auto}
+  .num,.foot{position:absolute}
+}
+</style>
+</head>
+<body>
+<div id="stage">
+
+<!-- 1 cover -->
+<section class="slide cover">
+  <div class="inner">
+    <div class="kicker">Administración · Proyecto de viaje</div>
+    <h1 class="h1" style="margin:26px 0 0">Japón</h1>
+    <div style="font-family:var(--serif);font-size:52px;line-height:1.12;margin-top:26px;color:#241f19">
+      Quince días. Tres formas de llegar.<br>Un continente de sobra.
+    </div>
+    <p class="lead" style="margin-top:34px;max-width:900px">Tres paquetes completos para dos adultos y un niño de 9 años, con cada peso justificado,
+    y un plan extendido para quien quiere más mapa que profundidad.</p>
+  </div>
+  <div class="vside">15 días · abril 2027</div>
+  <div class="anchor">
+    <div><b>$28,619</b><span>Turista</span></div>
+    <div><b>$59,173</b><span>Clase media</span></div>
+    <div><b>$147,844</b><span>Clase alta</span></div>
+    <div><b>$145,023</b><span>Asia Tour</span></div>
+  </div>
+  <div class="meta">
+    <div><b>Viajeros</b>2 adultos + 1 niño (9 años)</div>
+    <div><b>Salida</b>Guadalajara (GDL) · 10–24 de abril de 2027</div>
+    <div><b>Base</b>2 adultos + niño, tipo de cambio ¥0.1145</div>
+    <div><b>Entrega</b>22 de octubre de 2026</div>
+  </div>
+  <div class="bar"></div>
+</section>
+
+<!-- 2 encargo -->
+<section class="slide">
+  <div class="top"><div class="l">El encargo</div><div class="r">01</div></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:96px;margin-top:76px">
+    <div>
+      <h2 class="h2">Lo que nos<br>pidieron</h2>
+      <ul class="klist" style="margin-top:32px">
+        <li><span class="mk">01</span>Planear un viaje a Japón de 15 días.</li>
+        <li><span class="mk">02</span>Tres niveles: turista, clase media, clase alta.</li>
+        <li><span class="mk">03</span>Paquetes con actividades y destinos, no una lista de ciudades.</li>
+        <li><span class="mk">04</span>Un plan extra: recorrer Asia con el presupuesto alto.</li>
+        <li><span class="mk">05</span>Presentarlo. Y venderlo.</li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="h2">Lo que<br>entregamos</h2>
+      <ul class="klist" style="margin-top:32px">
+        <li><span class="mk">→</span>Un piso honesto: <b style="font-weight:600">$28,619</b> por persona, todo incluido.</li>
+        <li><span class="mk">→</span>Un techo real de lujo: <b style="font-weight:600">$147,844</b> por persona, con vuelos.</li>
+        <li><span class="mk">→</span>Cada costo con fuente, no con “aproximado”.</li>
+        <li><span class="mk">→</span>Un Asia Tour de 21 días con el mismo dinero del paquete alto.</li>
+      </ul>
+      <p class="body" style="margin-top:38px;color:var(--red);font-family:var(--serif);font-size:30px;line-height:1.3">
+        “Un paquete no se vende por lo que incluye,<br>sino por lo que el cliente deja de decidir.”</p>
+    </div>
+  </div>
+  <div style="position:absolute;left:104px;right:104px;bottom:118px;border-top:1px solid var(--line);padding-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:96px">
+    <p class="small" style="font-size:21px"><b style="color:var(--red)">Regla 01.</b> Todo precio se ancla en una fuente con fecha. Si no tiene fuente, no entra al paquete.</p>
+    <p class="small" style="font-size:21px"><b style="color:var(--red)">Regla 02.</b> Si un número del brief no cuadra con la realidad, se dice antes de que lo pregunte el jurado.</p>
+  </div>
+  <div class="foot">Japón · 15 días</div><div class="num">02 / 13</div>
+</section>
+
+<!-- 3 aritmetica -->
+<section class="slide statement">
+  <div class="top"><div class="l">La aritmética, antes que la fantasía</div><div class="r">02</div></div>
+  <div style="margin-top:60px;max-width:1560px">
+    <div class="big" style="font-size:74px;line-height:1.08;white-space:nowrap">$15,000 no compra un vuelo a Japón.<br><em>$15,000 sí compra quince días allá.</em></div>
+    <p class="lead" style="margin-top:34px">Es la primera decisión del proyecto y la que sostiene el precio: separar el boleto del viaje.
+    Con eso, los dos números del brief dejan de ser un rango decorativo y se vuelven dos productos reales.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:56px;margin-top:52px;border-top:2px solid var(--ink);padding-top:26px">
+    <div><div class="small" style="letter-spacing:.18em;text-transform:uppercase">Vuelo redondo GDL–NRT</div>
+      <div class="mono" style="font-size:44px;margin-top:10px">$14,900</div>
+      <p class="small" style="margin-top:8px">por persona. Tarifa más baja rastreada por Kayak en 72 h (21/10/2026). ×2 adultos + 1 niño = <span class="mono">$41,720</span>.</p></div>
+    <div><div class="small" style="letter-spacing:.18em;text-transform:uppercase">Gasto en destino · turista</div>
+      <div class="mono" style="font-size:44px;margin-top:10px;color:var(--red)">$14,713</div>
+      <p class="small" style="margin-top:8px">por persona, 15 días, sin vuelo. <b>Este es el $15,000 del brief.</b></p></div>
+    <div><div class="small" style="letter-spacing:.18em;text-transform:uppercase">Paquete clase alta</div>
+      <div class="mono" style="font-size:44px;margin-top:10px">$147,844</div>
+      <p class="small" style="margin-top:8px">por persona, todo incluido. <b>Este es el $150,000 del brief.</b></p></div>
+  </div>
+  <div class="foot">Regla del proyecto</div><div class="num">03 / 13</div>
+</section>
+
+<!-- 4 compare -->
+<section class="slide">
+  <div class="top"><div class="l">Los tres paquetes</div><div class="r">03</div></div>
+  <h2 class="h2" style="margin-top:52px">Mismo país, mismo mes,<br>tres Japones distintos</h2>
+  <div style="margin-top:44px"><div class="ct-head"><div class="ct-label">Concepto</div><div class="ct-col"><b>Turista</b><span>$85,858</span><em>total familia</em></div><div class="ct-col"><b>Clase media</b><span>$177,518</span><em>total familia</em></div><div class="ct-col"><b>Clase alta</b><span>$443,532</span><em>total familia</em></div></div><div class="ct-row"><div class="ct-label">Vuelos</div><div class="ct-col">$41,720</div><div class="ct-col">$60,200</div><div class="ct-col">$156,800</div></div><div class="ct-row"><div class="ct-label">Hospedaje</div><div class="ct-col">$12,824</div><div class="ct-col">$33,778</div><div class="ct-col">$89,310</div></div><div class="ct-row"><div class="ct-label">Comida</div><div class="ct-col">$11,594</div><div class="ct-col">$25,504</div><div class="ct-col">$69,559</div></div><div class="ct-row"><div class="ct-label">Transporte</div><div class="ct-col">$6,298</div><div class="ct-col">$25,648</div><div class="ct-col">$44,082</div></div><div class="ct-row"><div class="ct-label">Actividades</div><div class="ct-col">$2,862</div><div class="ct-col">$12,938</div><div class="ct-col">$32,060</div></div><div class="ct-row"><div class="ct-label">Seguros y datos</div><div class="ct-col">$10,560</div><div class="ct-col">$19,450</div><div class="ct-col">$51,721</div></div><div class="ct-row ct-foot"><div class="ct-label">Por persona</div><div class="ct-col">$28,619</div><div class="ct-col">$59,173</div><div class="ct-col">$147,844</div></div><div class="ct-row ct-foot2"><div class="ct-label">En destino, por persona</div><div class="ct-col">$14,713</div><div class="ct-col">$39,106</div><div class="ct-col">$95,577</div></div></div>
+  <p class="small" style="position:absolute;left:104px;bottom:92px;width:1620px">15 días / 14 noches · ¥1 = $0.1145 MXN · USD 1 = $18.42 MXN (Banxico, oct. 2026) · niño: 80% vuelo, 50% tren, 70% atracciones.</p>
+  <div class="foot">Comparativo</div><div class="num">04 / 13</div>
+</section>
+
+<!-- 5 turista -->
+<section class="slide">
+  <div class="top"><div class="l">Paquete 01 · Turista</div><div class="r">04</div></div>
+  <div class="tier" style="margin-top:52px">
+    <div>
+      <h2 class="h2">Japón con<br>peso ligero</h2>
+      <p class="promise">$28,619 por persona.<br>Y no, no se duerme en la calle.</p>
+      <p class="sell">Hostales con cuarto privado para los tres, konbini y una comida caliente al día, buses nocturnos en vez de shinkansen,
+      atracciones gratuitas más cuatro de pago. El truco no es gastar poco: es gastar en lo que se recuerda.</p>
+      <div class="timeline"><div class="d"><span class="dn">1</span><span class="dt">Vuelo GDL–NRT, escala en LAX</span><span class="dc">a bordo</span></div><div class="d"><span class="dn">2</span><span class="dt">Asakusa · Senso-ji · Nakamise</span><span class="dc">¥0</span></div><div class="d"><span class="dn">3</span><span class="dt">Harajuku · Meiji Jingu · Shibuya</span><span class="dc">¥0</span></div><div class="d"><span class="dn">4</span><span class="dt">Ueno · Ameyoko · Akihabara</span><span class="dc">¥0</span></div><div class="d"><span class="dn">5</span><span class="dt">Shinjuku Gyoen · mirador del Tocho</span><span class="dc">¥500</span></div><div class="d"><span class="dn">6</span><span class="dt">Bus nocturno a Kioto</span><span class="dc">¥4,000</span></div><div class="d"><span class="dn">7</span><span class="dt">Fushimi Inari · Gion</span><span class="dc">¥0</span></div><div class="d"><span class="dn">8</span><span class="dt">Arashiyama · Kinkaku-ji</span><span class="dc">¥500</span></div><div class="d"><span class="dn">9</span><span class="dt">Nara: Todai-ji y los venados</span><span class="dc">¥800</span></div><div class="d"><span class="dn">10</span><span class="dt">Osaka: castillo y Dotonbori</span><span class="dc">¥600</span></div><div class="d"><span class="dn">11</span><span class="dt">Himeji: el castillo blanco</span><span class="dc">¥1,000</span></div><div class="d"><span class="dn">12</span><span class="dt">Regreso a Tokyo en regional</span><span class="dc">¥8,000</span></div><div class="d"><span class="dn">13</span><span class="dt">teamLab Planets · Odaiba</span><span class="dc">¥4,000</span></div><div class="d"><span class="dn">14</span><span class="dt">Compras en Don Quijote</span><span class="dc">—</span></div><div class="d"><span class="dn">15</span><span class="dt">Vuelo NRT–GDL</span><span class="dc">a bordo</span></div></div>
+    </div>
+    <div class="spec">
+      <h4>Hospedaje</h4><p>Hostal con habitación privada familiar, 14 noches · promedio ¥8,000 por noche</p>
+      <h4>Comida</h4><p>¥2,500 al día por persona: konbini, supermercado y una gyudon o ramen</p>
+      <h4>Transporte</h4><p>Metro, trenes regionales y un bus nocturno. Sin JR Pass: aquí no conviene</p>
+      <h4>Incluye</h4><p>4 atracciones de pago · seguro de viaje · eSIM de datos · colchón de 8%</p>
+      <div class="daybox"><h4>Un día de este paquete</h4><div class="v">$981 por persona</div>
+        <p style="font-size:19px;margin-top:6px">Cama en hostal ¥2,700 · comida ¥2,500 · trenes ¥1,500 · un templo ¥600 · ¥1,266 de seguros y colchón</p></div>
+    </div>
+  </div>
+  <div class="foot">Turista</div><div class="num">05 / 13</div>
+</section>
+
+<!-- 6 media -->
+<section class="slide">
+  <div class="top"><div class="l">Paquete 02 · Clase media</div><div class="r">05</div></div>
+  <div class="tier" style="margin-top:52px">
+    <div>
+      <h2 class="h2">El Japón que<br>todos imaginan</h2>
+      <p class="promise">$59,173 por persona.<br>JR Pass, Fuji al amanecer y dos parques.</p>
+      <p class="sell">Hotel de negocios japonés —pequeño, impecable, con desayuno—, una noche de ryokan con onsen en Hakone,
+      JR Pass de 14 días y los dos parques que un niño de 9 años no perdona: DisneySea y Universal.</p>
+      <div class="timeline"><div class="d"><span class="dn">1</span><span class="dt">Vuelo GDL–NRT, una escala</span><span class="dc">a bordo</span></div><div class="d"><span class="dn">2</span><span class="dt">Tokyo: Asakusa y Skytree</span><span class="dc">¥0</span></div><div class="d"><span class="dn">3</span><span class="dt">Shibuya Sky · Shinjuku</span><span class="dc">¥3,400</span></div><div class="d"><span class="dn">4</span><span class="dt">DisneySea, día completo</span><span class="dc">¥10,900</span></div><div class="d"><span class="dn">5</span><span class="dt">Hakone: onsen y vista al Fuji</span><span class="dc">ryokan</span></div><div class="d"><span class="dn">6</span><span class="dt">Hakone–Kioto en shinkansen</span><span class="dc">JR Pass</span></div><div class="d"><span class="dn">7</span><span class="dt">Fushimi Inari · Kiyomizu-dera</span><span class="dc">¥500</span></div><div class="d"><span class="dn">8</span><span class="dt">Arashiyama · Kinkaku-ji</span><span class="dc">¥500</span></div><div class="d"><span class="dn">9</span><span class="dt">Nara y Osaka por la tarde</span><span class="dc">¥800</span></div><div class="d"><span class="dn">10</span><span class="dt">Universal Studios Japan</span><span class="dc">¥9,500</span></div><div class="d"><span class="dn">11</span><span class="dt">Hiroshima y Miyajima</span><span class="dc">JR Pass</span></div><div class="d"><span class="dn">12</span><span class="dt">Himeji · Kobe</span><span class="dc">¥1,000</span></div><div class="d"><span class="dn">13</span><span class="dt">Kioto–Tokyo · teamLab</span><span class="dc">¥4,500</span></div><div class="d"><span class="dn">14</span><span class="dt">Ginza · compras</span><span class="dc">—</span></div><div class="d"><span class="dn">15</span><span class="dt">Vuelo NRT–GDL</span><span class="dc">a bordo</span></div></div>
+    </div>
+    <div class="spec">
+      <h4>Hospedaje</h4><p>Hotel 3★ / business, 13 noches + 1 ryokan con cena kaiseki · promedio ¥20,000</p>
+      <h4>Comida</h4><p>¥5,500 al día por persona: desayuno incluido, dos comidas fuera</p>
+      <h4>Transporte</h4><p>JR Pass 14 días clase ordinaria + metro. Hiroshima y Miyajima entran en el pase</p>
+      <h4>Incluye</h4><p>DisneySea · Universal · teamLab · Shibuya Sky · Kiyomizu · seguro · eSIM · colchón 8%</p>
+      <div class="daybox"><h4>Un día de este paquete</h4><div class="v">$2,607 por persona</div>
+        <p style="font-size:19px;margin-top:6px">Hotel ¥7,000 · comida ¥5,500 · JR Pass y metro ¥5,000 · atracciones ¥2,500 · ¥2,769 de seguros y colchón</p></div>
+    </div>
+  </div>
+  <div class="foot">Clase media</div><div class="num">06 / 13</div>
+</section>
+
+<!-- 7 alta -->
+<section class="slide">
+  <div class="top"><div class="l">Paquete 03 · Clase alta</div><div class="r">06</div></div>
+  <div class="tier" style="margin-top:52px">
+    <div>
+      <h2 class="h2">Quince días<br>sin fricción</h2>
+      <p class="promise">$147,844 por persona.<br>El techo del brief, con vuelo incluido.</p>
+      <p class="sell">Premium economy, hoteles 5★, dos noches de ryokan con onsen privado, Green Car en todo el trayecto,
+      guía privado tres días, kaiseki de dos estrellas y Express Pass en Universal. Lo que se compra aquí es tiempo y silencio.</p>
+      <div class="timeline"><div class="d"><span class="dn">1</span><span class="dt">Vuelo en premium economy</span><span class="dc">a bordo</span></div><div class="d"><span class="dn">2</span><span class="dt">Check-in 5★ · teamLab · Ginza</span><span class="dc">¥4,800</span></div><div class="d"><span class="dn">3</span><span class="dt">Tokyo con guía privado: Meiji y Yanaka</span><span class="dc">guía</span></div><div class="d"><span class="dn">4</span><span class="dt">Sumo o kabuki · Omotesando</span><span class="dc">¥12,000</span></div><div class="d"><span class="dn">5</span><span class="dt">Hakone: ryokan, onsen privado, kaiseki</span><span class="dc">incluido</span></div><div class="d"><span class="dn">6</span><span class="dt">Hakone–Kioto en Green Car</span><span class="dc">JR Pass</span></div><div class="d"><span class="dn">7</span><span class="dt">Kioto privado: Fushimi, Gion, té</span><span class="dc">guía</span></div><div class="d"><span class="dn">8</span><span class="dt">Arashiyama · kaiseki 2 estrellas</span><span class="dc">¥28,000</span></div><div class="d"><span class="dn">9</span><span class="dt">Nara con guía · Osaka de noche</span><span class="dc">guía</span></div><div class="d"><span class="dn">10</span><span class="dt">USJ con Express Pass</span><span class="dc">¥22,000</span></div><div class="d"><span class="dn">11</span><span class="dt">Hiroshima y Miyajima en Green Car</span><span class="dc">JR Pass</span></div><div class="d"><span class="dn">12</span><span class="dt">Kanazawa: Kenroku-en</span><span class="dc">JR Pass</span></div><div class="d"><span class="dn">13</span><span class="dt">Disney con Premier Access</span><span class="dc">¥14,400</span></div><div class="d"><span class="dn">14</span><span class="dt">Ginza · spa · última compra</span><span class="dc">—</span></div><div class="d"><span class="dn">15</span><span class="dt">Vuelo NRT–GDL</span><span class="dc">a bordo</span></div></div>
+    </div>
+    <div class="spec">
+      <h4>Hospedaje</h4><p>5★ 12 noches + 2 noches de ryokan con onsen privado · promedio ¥48,000</p>
+      <h4>Comida</h4><p>¥15,000 al día por persona: dos kaiseki, una mesa con estrella, el resto a la carta</p>
+      <h4>Transporte</h4><p>JR Pass 14 días <b>Green Car</b>, traslados privados y taxi sin pensar</p>
+      <h4>Incluye</h4><p>Guía privado 3 días · USJ Express · Disney Premier · té · sumo · seguro · colchón 10%</p>
+      <div class="daybox"><h4>Un día de este paquete</h4><div class="v">$6,372 por persona</div>
+        <p style="font-size:19px;margin-top:6px">Hotel 5★ ¥15,800 · comida ¥15,000 · Green Car y taxis ¥8,600 · experiencias ¥6,200 · ¥10,000 de seguros y colchón</p></div>
+    </div>
+  </div>
+  <div class="foot">Clase alta</div><div class="num">07 / 13</div>
+</section>
+
+<!-- 8 presupuesto -->
+<section class="slide">
+  <div class="top"><div class="l">Dónde va cada peso</div><div class="r">07</div></div>
+  <h2 class="h2" style="margin-top:52px">El vuelo manda en el paquete barato.<br>El hotel manda en el caro.</h2>
+  <div class="legend">
+    <span><i style="background:#16130f"></i>Vuelos</span>
+    <span><i style="background:#2b2620"></i>Vuelos internos</span>
+    <span><i style="background:#4f4739"></i>Hospedaje</span>
+    <span><i style="background:#7c7264"></i>Comida</span>
+    <span><i style="background:#a89d8c"></i>Transporte</span>
+    <span><i style="background:#c9c0b0"></i>Actividades</span>
+    <span><i style="background:#e3dbd0"></i>Seguros, datos y colchón</span>
+  </div>
+  <div style="margin-top:18px">
+    <div class="brow">
+      <div class="bname">Turista<span>15 días · 4 ciudades</span></div>
+      <div class="bbar"><span class="seg" style="flex:48.592;background:#16130f" title="Vuelos: $41,720 (48.6%)">49%</span><span class="seg" style="flex:14.936;background:#4f4739" title="Hospedaje: $12,824 (14.9%)">15%</span><span class="seg" style="flex:13.504;background:#7c7264" title="Comida: $11,594 (13.5%)">14%</span><span class="seg" style="flex:7.335;background:#a89d8c" title="Transporte: $6,298 (7.3%)"></span><span class="seg" style="flex:3.333;background:#c9c0b0" title="Actividades: $2,862 (3.3%)"></span><span class="seg" style="flex:12.299;background:#e3dbd0" title="Seguros, datos y colchón: $10,560 (12.3%)">12%</span></div>
+      <div class="btot">$85,858</div>
+    </div><div class="brow">
+      <div class="bname">Clase media<span>15 días · 5 ciudades</span></div>
+      <div class="bbar"><span class="seg" style="flex:33.912;background:#16130f" title="Vuelos: $60,200 (33.9%)">34%</span><span class="seg" style="flex:19.028;background:#4f4739" title="Hospedaje: $33,778 (19.0%)">19%</span><span class="seg" style="flex:14.367;background:#7c7264" title="Comida: $25,504 (14.4%)">14%</span><span class="seg" style="flex:14.448;background:#a89d8c" title="Transporte: $25,648 (14.4%)">14%</span><span class="seg" style="flex:7.288;background:#c9c0b0" title="Actividades: $12,938 (7.3%)"></span><span class="seg" style="flex:10.957;background:#e3dbd0" title="Seguros, datos y colchón: $19,450 (11.0%)">11%</span></div>
+      <div class="btot">$177,518</div>
+    </div><div class="brow">
+      <div class="bname">Clase alta<span>15 días · 5 ciudades</span></div>
+      <div class="bbar"><span class="seg" style="flex:35.353;background:#16130f" title="Vuelos: $156,800 (35.4%)">35%</span><span class="seg" style="flex:20.136;background:#4f4739" title="Hospedaje: $89,310 (20.1%)">20%</span><span class="seg" style="flex:15.683;background:#7c7264" title="Comida: $69,559 (15.7%)">16%</span><span class="seg" style="flex:9.939;background:#a89d8c" title="Transporte: $44,082 (9.9%)">10%</span><span class="seg" style="flex:7.228;background:#c9c0b0" title="Actividades: $32,060 (7.2%)"></span><span class="seg" style="flex:11.661;background:#e3dbd0" title="Seguros, datos y colchón: $51,721 (11.7%)">12%</span></div>
+      <div class="btot">$443,532</div>
+    </div><div class="brow">
+      <div class="bname">Asia Tour<span>21 días · 5 países</span></div>
+      <div class="bbar"><span class="seg" style="flex:39.902;background:#16130f" title="Vuelos: $173,600 (39.9%)">40%</span><span class="seg" style="flex:12.011;background:#2b2620" title="Vuelos internos: $52,258 (12.0%)">12%</span><span class="seg" style="flex:13.159;background:#4f4739" title="Hospedaje: $57,250 (13.2%)">13%</span><span class="seg" style="flex:10.744;background:#7c7264" title="Comida: $46,743 (10.7%)">11%</span><span class="seg" style="flex:4.790;background:#a89d8c" title="Transporte: $20,839 (4.8%)"></span><span class="seg" style="flex:6.711;background:#c9c0b0" title="Actividades: $29,198 (6.7%)"></span><span class="seg" style="flex:12.683;background:#e3dbd0" title="Seguros, datos y colchón: $55,182 (12.7%)">13%</span></div>
+      <div class="btot">$435,070</div>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:56px;margin-top:34px;border-top:1px solid var(--line);padding-top:22px">
+    <p class="small"><b>Turista:</b> 49% del costo es el boleto. Recortar el hotel casi no mueve la aguja; mover la fecha, sí.</p>
+    <p class="small"><b>Clase media:</b> el reparto se equilibra. Aquí el JR Pass ($9,160 por adulto) se paga solo con Hiroshima.</p>
+    <p class="small"><b>Clase alta:</b> 35% vuelo, 20% hotel, 16% comida. Es el único de los tres donde bajar de hotel se siente.</p>
+  </div>
+  <div class="foot">Estructura de costos</div><div class="num">08 / 13</div>
+</section>
+
+<!-- 9 asia -->
+<section class="slide">
+  <div class="top"><div class="l">Plan extra · Asia Tour</div><div class="r">08</div></div>
+  <div style="display:grid;grid-template-columns:1fr 560px;gap:80px;margin-top:56px">
+    <div>
+      <h2 class="h2">Cinco países<br>con el dinero<br>de uno</h2>
+      <p class="lead" style="margin-top:26px">El techo del brief —<span class="mono">$150,000</span> por persona— repartido en 21 días
+      y cinco fronteras. No es un upgrade: es un cambio de pregunta.</p>
+      <p class="body" style="margin-top:22px">Lo que se compra con ese dinero deja de ser profundidad y se vuelve álbum: seis días de Japón,
+      cuatro de Corea, cuatro de Tailandia, cuatro de Vietnam y tres de Singapur. Cada país baja una estrella de hotel para pagar el siguiente vuelo.</p>
+      <div style="margin-top:30px;display:flex;gap:56px">
+        <div><div class="small" style="letter-spacing:.16em;text-transform:uppercase">Total familia</div><div class="mono" style="font-size:40px;color:var(--red)">$435,070</div></div>
+        <div><div class="small" style="letter-spacing:.16em;text-transform:uppercase">Por persona</div><div class="mono" style="font-size:40px">$145,023</div></div>
+        <div><div class="small" style="letter-spacing:.16em;text-transform:uppercase">Por día, familia</div><div class="mono" style="font-size:40px">$20,718</div></div>
+      </div>
+    </div>
+    <div class="spec" style="border-left-color:var(--indigo)">
+      <h4>Ruta</h4><p>Tokyo 6 · Seúl 4 · Bangkok 4 · Hanói 4 · Singapur 3</p>
+      <h4>Vuelos</h4><p>2 internacionales (open jaw) + 4 internos en aerolíneas de bajo costo</p>
+      <h4>Visas</h4><p>Japón, Tailandia y Singapur: sin visa. Corea: K-ETA (~$150). Vietnam: e-visa 90 días (~$460).</p>
+      <h4>Diferencia clave</h4><p>No es un descuento del paquete alto ni una suma de recortes: es otro producto, con otro cliente.</p>
+    </div>
+  </div>
+  <div class="route" style="position:absolute;left:104px;right:104px;bottom:86px">
+    <div class="node"><div class="dot"></div><div class="city">Tokyo</div><div class="cty">Japón</div><div class="n">6 noches</div><div class="f">Shibuya, teamLab y un día de parque</div></div>
+    <div class="link">2h20</div>
+    <div class="node"><div class="dot"></div><div class="city">Seúl</div><div class="cty">Corea del Sur</div><div class="n">4 noches</div><div class="f">Gyeongbokgung, Bukchon, Hongdae</div></div>
+    <div class="link">5h50</div>
+    <div class="node"><div class="dot"></div><div class="city">Bangkok</div><div class="cty">Tailandia</div><div class="n">4 noches</div><div class="f">Grand Palace, Ayutthaya, Chatuchak</div></div>
+    <div class="link">1h55</div>
+    <div class="node"><div class="dot"></div><div class="city">Hanói</div><div class="cty">Vietnam</div><div class="n">4 noches</div><div class="f">Hoan Kiem, Halong y comida de calle</div></div>
+    <div class="link">3h30</div>
+    <div class="node"><div class="dot"></div><div class="city">Singapur</div><div class="cty">Singapur</div><div class="n">3 noches</div><div class="f">Gardens by the Bay, hawker centers</div></div>
+  </div>
+  <div class="foot">Asia Tour · 21 días</div><div class="num">09 / 13</div>
+</section>
+
+<!-- 10 trade-off -->
+<section class="slide">
+  <div class="top"><div class="l">Lo que se gana y lo que se pierde</div><div class="r">09</div></div>
+  <h2 class="h2" style="margin-top:52px">El Asia Tour no es mejor.<br>Es más.</h2>
+  <div class="ledger">
+    <div class="lrow lhead"><div class="la"></div><div class="lv">Clase alta · Japón</div><div class="lv hi">Asia Tour · 21 días</div></div><div class="lrow"><div class="la">Días</div><div class="lv">15</div><div class="lv">21</div></div><div class="lrow"><div class="la">Países</div><div class="lv">1</div><div class="lv">5</div></div><div class="lrow"><div class="la">Ciudades base</div><div class="lv">4</div><div class="lv">5</div></div><div class="lrow"><div class="la">Hotel promedio</div><div class="lv">¥48,000/noche</div><div class="lv win">¥25,000/noche</div></div><div class="lrow"><div class="la">Comida por persona al día</div><div class="lv">¥15,000</div><div class="lv win">¥7,200</div></div><div class="lrow"><div class="la">Guía privado</div><div class="lv">3 días</div><div class="lv win">ninguno</div></div><div class="lrow"><div class="la">Vuelos internos</div><div class="lv">0</div><div class="lv">4</div></div><div class="lrow"><div class="la">Costo por día, familia</div><div class="lv">$29,569</div><div class="lv win">$20,718</div></div><div class="lrow"><div class="la">Total familia</div><div class="lv">$443,532</div><div class="lv">$435,070</div></div>
+  </div>
+  <p class="lead" style="margin-top:36px;max-width:1400px">Por eso se vende aparte: al cliente que ya hizo Japón una vez, al que quiere el mapa completo
+  en un solo boleto, o al que prefiere contar cinco países a contar un templo. Al que va por primera vez y quiere Japón, no se le ofrece esto.</p>
+  <div class="foot">Costo de la amplitud</div><div class="num">10 / 13</div>
+</section>
+
+<!-- 11 riesgos -->
+<section class="slide">
+  <div class="top"><div class="l">Riesgos y control</div><div class="r">10</div></div>
+  <h2 class="h2" style="margin-top:52px">Lo que puede salir mal,<br>y qué hacemos antes</h2>
+  <div class="rgrid">
+    <div class="it"><h5>Tipo de cambio</h5><p>El yen a <b>$0.1145</b>. Un movimiento de 10% mueve el paquete alto <b>$23,500</b> por familia.
+      Compramos yenes al confirmar el anticipo; el precio se firma en pesos.</p></div>
+    <div class="it"><h5>Temporada</h5><p>Salimos el 10 de abril: después del pico de hanami y antes de la Golden Week (29 abr–5 may).
+      Mismo clima, 15–20% menos hotel.</p></div>
+    <div class="it"><h5>Visas</h5><p>Mexicanos: Japón sin visa 90 días, Tailandia 60, Singapur 30. Corea pide K-ETA y Vietnam e-visa.
+      Trámite documentado, no improvisado.</p></div>
+    <div class="it"><h5>El niño</h5><p>9 años entra en tarifa infantil: 50% en JR Pass, 80% en vuelo, 70% en atracciones.
+      El ahorro real del paquete medio son <b>$13,200</b>.</p></div>
+    <div class="it"><h5>Cancelación</h5><p>Seguro con cancelación por causa médica y equipaje. Los ryokan cobran 100% a 7 días:
+      se reservan al final, cuando el viaje ya está pagado.</p></div>
+    <div class="it"><h5>Precio del vuelo</h5><p>La tarifa de <b>$14,900</b> es de las últimas 72 h y no es infinita.
+      El paquete se congela al firmar; sin anticipo, se recotiza.</p></div>
+  </div>
+  <div style="position:absolute;left:104px;right:104px;bottom:112px;border-top:2px solid var(--ink);padding-top:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:56px">
+    <div><div class="small" style="letter-spacing:.18em;text-transform:uppercase;color:var(--red)">Anticipo 30%</div>
+      <p class="body" style="font-size:21px;margin-top:6px">Al firmar. Congela la tarifa aérea y el tipo de cambio de la parte terrestre.</p></div>
+    <div><div class="small" style="letter-spacing:.18em;text-transform:uppercase;color:var(--red)">70% a 30 días</div>
+      <p class="body" style="font-size:21px;margin-top:6px">Paga hoteles, JR Pass y parques. Los ryokan se reservan aquí, no antes.</p></div>
+    <div><div class="small" style="letter-spacing:.18em;text-transform:uppercase;color:var(--red)">Si el vuelo sube</div>
+      <p class="body" style="font-size:21px;margin-top:6px">Más de 10% antes del anticipo, se recotiza sin costo o se cambia de fecha.</p></div>
+  </div>
+  <div class="foot">Gestión del riesgo</div><div class="num">11 / 13</div>
+</section>
+
+<!-- 12 venta -->
+<section class="slide statement">
+  <div class="top"><div class="l">Por qué este proyecto se vende</div><div class="r">11</div></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:96px;margin-top:64px">
+    <div>
+      <div class="big" style="font-size:62px;line-height:1.08">Cualquiera cotiza Japón.<br><em>Nosotros defendemos<br>cada peso.</em></div>
+      <p class="lead" style="margin-top:30px">Tres precios ancla, un upsell natural y una extensión que ningún equipo va a presentar:
+      el mismo dinero en cinco países.</p>
+    </div>
+    <div>
+      <ul class="klist">
+        <li><span class="mk">P</span><b style="font-weight:600">Producto.</b> Tres paquetes cerrados, un Asia Tour. Todo costeado línea por línea, con fuente y fecha.</li>
+        <li><span class="mk">P</span><b style="font-weight:600">Precio.</b> $28,619 → $59,173 → $147,844. Cada salto duplica la experiencia, no el margen del proveedor.</li>
+        <li><span class="mk">P</span><b style="font-weight:600">Plaza.</b> Venta directa por WhatsApp: itinerario y desglose en 24 horas, anticipo del 30%.</li>
+        <li><span class="mk">P</span><b style="font-weight:600">Promoción.</b> Publicamos lo que <i>no</i> incluye. Es lo que nos hace creíbles y lo que cierra la venta.</li>
+      </ul>
+      <p class="body" style="margin-top:30px;border-top:1px solid var(--line);padding-top:22px">
+        Si el jurado pregunta “¿y si no tengo $148,000?”, la respuesta ya está en la mesa: <b style="font-weight:600">$28,619 y el mismo Japón</b>.</p>
+    </div>
+  </div>
+  <div class="foot">Cierre</div><div class="num">12 / 13</div>
+</section>
+
+<!-- 13 fuentes -->
+<section class="slide">
+  <div class="top"><div class="l">Fuentes y método</div><div class="r">12</div></div>
+  <h2 class="h2" style="margin-top:52px">Ningún número de esta<br>presentación es inventado</h2>
+  <p class="small" style="margin-top:22px;max-width:1300px">Consulta: 21 de octubre de 2026. Tipo de cambio: Banxico, ¥1 = $0.1145 MXN (08/10/2026), USD 1 = $18.42 MXN (15/10/2026).
+  Los precios de vuelo son la tarifa más baja rastreada en 72 h y cambian a diario; se congelan al firmar el anticipo.</p>
+  <div class="src">
+    <p><b>Vuelos</b>Kayak México — GDL–NRT, tarifa más baja de las últimas 72 h: kayak.com.mx/vuelos/…/GDL/Tokyo-TYO</p>
+    <p><b>JR Pass</b>Japan Rail Pass oficial, precios de canje (7/14/21 días, ordinario y Green, adulto e infantil): japanrailpass.net/en/purchase/price/</p>
+    <p><b>Hospedaje</b>Promedios por categoría en Tokyo 2026 (hostal ¥3,000–5,000; business ¥7,000–12,000; 4–5★ ¥40,000–80,000; ryokan ¥15,000–50,000): japantripcost.com</p>
+    <p><b>Parques</b>Tokyo Disney Resort, tarifa pico ¥12,400 adulto; Universal Studios Japan desde ¥8,400 adulto y ¥5,500 niño: tokyodisneyresort.jp · osakatourism.org</p>
+    <p><b>Atracciones</b>Shibuya Sky ¥2,700–3,400 en línea; teamLab Planets desde ~¥4,000: shibuya-sky-tickets.com · teamlabplanets.dmm.com</p>
+    <p><b>Trenes</b>Tokyo–Kioto en Nozomi ¥14,170 (referencia para decidir el pase): tokyocheapo.com</p>
+    <p><b>Visas</b>Requisitos por pasaporte mexicano: Japón 90 días sin visa, Corea K-ETA 3 meses, Tailandia 60 días, Singapur 30 días, Vietnam e-visa 90 días: visa requirements for Mexican citizens · k-eta.go.kr · evisa.gov.vn</p>
+    <p><b>Método</b>Modelo de costos en Python con tipo de cambio fijo, tarifa infantil diferenciada (vuelo 80%, tren 50%, atracciones 70%) y colchón del 8–10%. Reparto por persona y por familia de 3.</p>
+  </div>
+  <div class="foot">Anexo</div><div class="num">13 / 13</div>
+</section>
+
+</div>
+
+<script>
+(function(){
+  var slides = [].slice.call(document.querySelectorAll('.slide'));
+  var i = parseInt(localStorage.getItem('jp_slide') || '0', 10);
+  if (isNaN(i) || i < 0 || i >= slides.length) i = 0;
+  function show(n){
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach(function(s, k){
+      s.classList.toggle('active', k === i);
+      var nn = s.querySelector('.top .r');
+      if (nn) nn.textContent = ('0' + (k + 1)).slice(-2) + ' / ' + slides.length;
+    });
+    localStorage.setItem('jp_slide', String(i));
+  }
+  function fit(){
+    var s = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+    var st = document.getElementById('stage');
+    st.style.transform = 'scale(' + s + ')';
+    st.style.left = Math.round((window.innerWidth - 1920 * s) / 2) + 'px';
+    st.style.top  = Math.round((window.innerHeight - 1080 * s) / 2) + 'px';
+  }
+  window.addEventListener('resize', fit);
+  window.addEventListener('keydown', function(e){
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown'){ e.preventDefault(); show(i + 1); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp'){ e.preventDefault(); show(i - 1); }
+    else if (e.key === 'Home'){ show(0); }
+    else if (e.key === 'End'){ show(slides.length - 1); }
+    else if (e.key.toLowerCase() === 'p'){ window.print(); }
+  });
+  document.addEventListener('click', function(e){
+    if (e.clientX < window.innerWidth * 0.25) show(i - 1); else show(i + 1);
+  });
+  fit(); show(i);
+})();
+</script>
+</body>
+</html>
