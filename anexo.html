@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anexo de fuentes y modelo de costos · Tokio en 15 días</title>
+  <meta name="description" content="Anexo imprimible con el modelo de costos, la aritmética y las fuentes del sitio Tokio en 15 días.">
+  <meta name="theme-color" content="#14110e">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./anexo.css">
+</head>
+<body class="anexo">
+  <header class="anexo-top">
+    <a href="./index.html">← Volver al sitio</a>
+    <div class="anexo-top-actions">
+      <span>D3 · Anexo de fuentes y modelo</span>
+      <button type="button" data-print>Imprimir / PDF</button>
+    </div>
+  </header>
+
+  <main class="anexo-main">
+    <header class="anexo-cover">
+      <p class="kicker">Tokio en 15 días · anexo D3</p>
+      <h1>Las cuentas,<br>sin caja negra.</h1>
+      <p class="lead">Este anexo es la versión imprimible del modelo de costos del sitio. Sirve para el Q&amp;A: cada rubro tiene monto, factor infantil, multiplicación y fuente. Si una cifra no cuadra, se corrige antes de publicarla.</p>
+      <div class="anexo-meta">
+        <div><span>Viajeros</span><b>3 adultos + 1 niño de 12</b></div>
+        <div><span>Salida</span><b>Guadalajara (GDL)</b></div>
+        <div><span>Ventana Tokio</span><b>15 feb – 1 mar 2027</b></div>
+        <div><span>Ventana Asia</span><b>15 feb – 7 mar 2027</b></div>
+        <div><span>Consulta</span><b>22/10/2026</b></div>
+        <div><span>Tipo de cambio</span><b>¥1 = $0.1165 · USD 1 = $18.4253</b></div>
+      </div>
+      <div class="anexo-cover-grid" id="anexo-cover-grid"></div>
+      <p class="nota">No es una cotización cerrada: es el modelo que sostiene la cotización. Las tarifas se congelan con el anticipo del 30% y están sujetas a disponibilidad.</p>
+    </header>
+
+    <section class="anexo-section" id="anexo-resumen">
+      <h2>1. Resumen de los cuatro productos</h2>
+      <p>Las tres cifras del grupo nunca se confunden: precio por adulto, precio del niño y total del grupo. El costo por día es un promedio del grupo, etiquetado como promedio.</p>
+      <div class="anexo-table-wrap">
+        <table class="anexo-table" id="anexo-totales">
+          <caption>Totales por producto</caption>
+          <thead><tr><th>Producto</th><th>Días</th><th>Adulto</th><th>Niño 12</th><th>Grupo 3+1</th><th>Por día / persona</th><th>Alcance</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="nota">Turista se publica en dos alcances: solo terreno ($25,000 por adulto) y con vuelo ($45,010 por adulto). Los otros tres son todo incluido.</p>
+    </section>
+
+    <div id="anexo-productos"></div>
+
+    <section class="anexo-section" id="anexo-supuestos">
+      <h2>5. Supuestos declarados</h2>
+      <div class="anexo-cols">
+        <div>
+          <h3>Tipo de cambio y precios</h3>
+          <ul>
+            <li>¥1 = $0.1165 MXN (Banxico, 19/10/2026).</li>
+            <li>USD 1 = $18.4253 MXN (FIX Banxico, 21/10/2026).</li>
+            <li>Cifras en pesos, redondeadas al peso. Las multiplicaciones se hacen sobre el valor exacto y se muestran redondeadas.</li>
+            <li>Tarifas aéreas consultadas el 22/10/2026; no son una reserva. Se congelan con el anticipo.</li>
+          </ul>
+          <h3>Temporada</h3>
+          <ul>
+            <li>Ventana elegida por clima, precio y multitudes: febrero es temporada baja en Tokio; el Año Nuevo chino cae a principios de febrero y el viaje empieza el 15/02.</li>
+            <li>Tokio en febrero: máxima media 10 °C, mínima 2 °C, 15% de días con lluvia o nieve (Japan Guide).</li>
+            <li>Floración de ciruelo de mediados a finales de febrero; menos multitud que el cerezo.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Niño de 12 años</h3>
+          <ul>
+            <li>Aéreo: tarifa adulta (el descuento infantil termina a los 11 en la mayoría de aerolíneas).</li>
+            <li>Hospedaje: sin cargo extra; duerme en la misma habitación. No se cotiza cama adicional.</li>
+            <li>Transporte: tarifa adulta en JR/metro desde los 12.</li>
+            <li>Atracciones: Disney junior 12–17; Skytree niño 6–14; teamLab niño 4–12; Ghibli niño 7–12.</li>
+            <li>Comida: 80% del adulto. Contingencia: 90%. Gestión: 80%.</li>
+          </ul>
+          <h3>Habitaciones y transporte</h3>
+          <ul>
+            <li>Turista: una habitación cuádruple real (4 camas).</li>
+            <li>Media: dos habitaciones, triple + individual.</li>
+            <li>Alta: dos habitaciones deluxe (king + twin).</li>
+            <li>Asia: dos habitaciones por ciudad.</li>
+            <li>No se cotiza JR Pass nacional con base fija en Tokio: se usan pases locales y de un día.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="anexo-warning">
+        <b>Limitación importante:</b> la visa tailandesa es un requisito nuevo (desde el 15/09/2026) y puede tardar o ser negada. Si no se obtiene, el Asian Tour no se puede operar y se devuelve la parte no incurrida. La visa se tramita antes de comprar los vuelos.
+      </div>
+    </section>
+
+    <section class="anexo-section" id="anexo-fuentes">
+      <h2>6. Fuentes</h2>
+      <p>Cada cifra del sitio se apoya en una de estas fuentes. La columna “para qué se usó” explica la relación; la fecha es la de consulta. Los enlaces se abren en otra pestaña.</p>
+      <div class="anexo-table-wrap">
+        <table class="anexo-table anexo-fuentes" id="anexo-fuentes-tabla">
+          <caption>Fuentes consultadas</caption>
+          <thead><tr><th>#</th><th>Grupo</th><th>Fuente</th><th>Consulta</th><th>Para qué se usó</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="anexo-section" id="anexo-verificacion">
+      <h2>7. Verificación</h2>
+      <p>Estas son las comprobaciones que el sitio muestra en vivo. Si alguna falla, el número no se publica.</p>
+      <ul class="anexo-checks" id="anexo-checks"></ul>
+    </section>
+  </main>
+
+  <footer class="anexo-footer">
+    <p>Tokio en 15 días · Anexo D3 · Consulta 22/10/2026 · ¥1 = $0.1165 · USD 1 = $18.4253</p>
+    <p><a href="./index.html">Volver al sitio</a> · <button type="button" data-print>Imprimir / PDF</button></p>
+  </footer>
+
+  <script src="./precios.js"></script>
+  <script src="./anexo.js"></script>
+</body>
+</html>
