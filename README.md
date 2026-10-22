@@ -90,21 +90,24 @@ El verificador comprueba:
 
 ## 4. Publicar en GitHub Pages
 
-El repositorio ya tiene un workflow que publica **solo los archivos públicos** en Pages (no publica `reference/`, las instrucciones internas ni los scripts de desarrollo):
+El sitio ya está publicado en:
+
+**https://sbg-udg.github.io/administracion-japan-trip/**
+
+La publicación usa la rama **`gh-pages`**, que GitHub Pages detectó y activó al crearla. El workflow de `main` mantiene esa rama actualizada:
 
 - Archivo: `.github/workflows/pages.yml`.
 - Se dispara con cada push a `main` o manualmente desde **Actions**.
-- Usa `actions/configure-pages` con `enablement: true`, así que intenta habilitar Pages si aún no está activo.
-- El paso “Preparar solo los archivos públicos” copia `index.html`, CSS, JS, `assets/` y `respaldo/` a `sitio-publicado/`; el resto del repositorio no se publica.
-- No hay paso manual después de publicar: el sitio queda servido desde la raíz del artefacto.
+- El paso “Preparar solo los archivos públicos” copia `index.html`, CSS, JS, `assets/` y `respaldo/` a `sitio-publicado/`; el resto del repositorio (incluidas las instrucciones internas y `reference/`) no se publica.
+- `peaceiris/actions-gh-pages` publica ese directorio en `gh-pages`, con `force_orphan`.
+- No hay paso manual después de publicar.
 
-**URL esperada:** `https://sbg-udg.github.io/administracion-japan-trip/`
-
-Si el workflow falla porque Pages no está habilitado:
+Si en el futuro Pages se desactiva:
 
 1. Ve a **Settings → Pages**.
-2. En **Build and deployment**, elige **GitHub Actions**.
-3. Vuelve a correr el workflow desde **Actions → Publicar sitio en GitHub Pages → Run workflow**.
+2. En **Build and deployment**, elige **Deploy from a branch**.
+3. Branch: **`gh-pages`**; carpeta: **`/ (root)`**.
+4. Guarda y espera el despliegue.
 
 Verificación después de publicar:
 
@@ -115,8 +118,6 @@ Verificación después de publicar:
 - [ ] `#turista`, `#media`, `#alta` y `#asia` abren el nivel correcto.
 - [ ] Abre `index.html` desde `file://` y el selector sigue funcionando.
 - [ ] `anexo.html` abre y se imprime.
-
----
 
 ## 5. Qué se decidió y qué se declara
 

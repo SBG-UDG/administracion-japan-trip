@@ -1,4 +1,4 @@
-name: Publicar sitio en GitHub Pages
+name: Actualizar sitio en GitHub Pages
 
 on:
   push:
@@ -6,9 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: pages
@@ -16,18 +14,10 @@ concurrency:
 
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Descargar el repositorio
         uses: actions/checkout@v4
-
-      - name: Configurar Pages (lo habilita si aún no existe)
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       - name: Preparar solo los archivos públicos
         run: |
@@ -35,11 +25,13 @@ jobs:
           cp index.html styles.css app.js precios.js anexo.html anexo.css anexo.js .nojekyll sitio-publicado/
           cp -r assets respaldo sitio-publicado/
 
-      - name: Empaquetar el sitio estático
-        uses: actions/upload-pages-artifact@v3
+      - name: Publicar en la rama gh-pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: sitio-publicado
-
-      - name: Publicar
-        id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./sitio-publicado
+          publish_branch: gh-pages
+          force_orphan: true
+          user_name: "SBG-UDG"
+          user_email: "sebastian.banoz5068@alumnos.udg.mx"
+          commit_message: "Publicar sitio"
