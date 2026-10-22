@@ -9,7 +9,7 @@ Cuatro productos, cuatro precios por adulto y una sola regla: cada cifra se pued
 | Turista · solo terreno | $25,000 | $11,845 | $86,845 | $1,447 |
 | Turista · con vuelo | $45,010 | $31,855 | $166,885 | $2,781 |
 | Clase media | $75,000 | $51,427 | $276,427 | $4,607 |
-| Clase alta | $150,000 | $113,255 | $563,255 | $9,388 |
+| Clase alta | $150,000 | $113,340 | $563,340 | $9,389 |
 | Asian Tour | $150,000 | $112,860 | $562,860 | $6,701 |
 
 **Ventana:** 15 feb – 1 mar 2027 (Tokio); 15 feb – 7 mar 2027 (Asian Tour).

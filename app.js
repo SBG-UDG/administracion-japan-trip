@@ -304,6 +304,13 @@
       </li>
     `).join("");
 
+    const activitiesNote = p.id === "turista"
+      ? "Presupuesto del rubro: $2,600 por adulto. Las entradas listadas suman ≈$1,969; el resto es reserva de horarios, colas y una actividad de respaldo."
+      : p.id === "media"
+        ? "Presupuesto del rubro: $8,500 por adulto. Las entradas listadas suman ≈$2,703; el resto es comida guiada, ceremonia del té y reservas."
+        : p.id === "alta"
+          ? "Presupuesto del rubro: $12,200 por adulto. Las experiencias listadas suman ≈$12,198; el resto es reserva y flexibilidad."
+          : "Presupuesto del rubro: $18,000 por adulto. Las entradas listadas son una parte; el resto son tours, guías y traslados de actividades en cinco ciudades.";
     const salidas = p.salidas.map((s) => `
       <li>
         <b>${esc(s.nombre)}</b>
@@ -412,6 +419,7 @@
         <div class="card">
           <h3>Actividades con nombre y precio</h3>
           <ul class="activity-list">${activities}</ul>
+          <p class="table-note">${activitiesNote}</p>
         </div>
         <div class="card">
           <h3>Salidas de un día</h3>
@@ -670,7 +678,7 @@
       <div class="asia-summary-card">
         <span class="label">Alta vs Asia</span>
         <div class="value">−28.6%</div>
-        <div class="note">$9,388 → $6,701 por día</div>
+        <div class="note">$9,389 → $6,701 por día</div>
       </div>
       <div class="asia-summary-card">
         <span class="label">Regreso</span>

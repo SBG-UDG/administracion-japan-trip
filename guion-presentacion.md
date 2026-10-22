@@ -89,7 +89,7 @@ Cambia a `#media` (clic en la pestaña o `#media`). Señala **$75,000 / $51,427 
 > “El niño baja a $51,427: no paga hotel, pero sí vuelo y metro como adulto.”
 
 ### 3:55–4:30 · Clase alta
-Cambia a `#alta`. Señala **$150,000 / $113,255 / $563,255 / $9,388**.
+Cambia a `#alta`. Señala **$150,000 / $113,340 / $563,340 / $9,389**.
 
 > “La clase alta es vuelo ejecutivo, Marunouchi, guía privado tres días, chofer para las salidas y un almuerzo Michelin. No es un hotel cinco estrellas: con cuatro personas y ejecutiva, un cinco estrellas se come el presupuesto. Preferimos dormir muy bien y no hacer filas.”
 
@@ -113,9 +113,9 @@ Señala el mapa:
 > “El orden es el producto. No se reordena para ahorrar: se acepta el zigzag.”
 
 ### 5:55–6:30 · La banda de precio
-> “El brief permite $150,000 más o menos $15,000 por adulto. Lo cerramos en $150,000 exactos, con el grupo en $562,860. Es casi el mismo total que la clase alta: $563,255. La diferencia es que el Asia lo gasta en 21 días y cinco países.”
+> “El brief permite $150,000 más o menos $15,000 por adulto. Lo cerramos en $150,000 exactos, con el grupo en $562,860. Es casi el mismo total que la clase alta: $563,340. La diferencia es que el Asia lo gasta en 21 días y cinco países.”
 
-> “El costo por día baja de $9,388 a $6,701: 28.6% menos por persona y por día.”
+> “El costo por día baja de $9,389 a $6,701: 28.6% menos por persona y por día.”
 
 ### 6:30–7:10 · Gana / pierde
 > “Lo que se gana: seis días más, cuatro países más, un solo sentido, menos costo por día. Lo que se pierde: ejecutiva por premium economy, hotel 4 estrellas superior por 4 estrellas, guía privado por guías locales, una base por cinco, y Tokio pasa de 14 a 6 noches.”
@@ -216,7 +216,7 @@ Eso gana más puntos que inventar.
 | Turista (solo terreno) | $25,000 | $11,845 | $86,845 | $1,447 |
 | Turista (con vuelo) | $45,010 | $31,855 | $166,885 | $2,781 |
 | Clase media | $75,000 | $51,427 | $276,427 | $4,607 |
-| Clase alta | $150,000 | $113,255 | $563,255 | $9,388 |
+| Clase alta | $150,000 | $113,340 | $563,340 | $9,389 |
 | Asian Tour | $150,000 | $112,860 | $562,860 | $6,701 |
 
 **Vuelo turista:** $20,010 por persona (USD 986 + maleta USD 100; 1 escala en Vancouver; 25 h 30 min ida / 18 h 45 min vuelta).

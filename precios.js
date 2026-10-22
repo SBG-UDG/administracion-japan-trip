@@ -1604,8 +1604,8 @@ window.PRECIOS = {
       "noches": 14,
       "vueloIncluido": true,
       "precioAdulto": 150000,
-      "precioNino": 113255,
-      "totalGrupo": 563255,
+      "precioNino": 113340,
+      "totalGrupo": 563340,
       "categorias": [
         {
           "clave": "vuelo",
@@ -1654,7 +1654,7 @@ window.PRECIOS = {
         {
           "clave": "actividades",
           "nombre": "Actividades y entradas",
-          "adulto": 10500,
+          "adulto": 12200,
           "factorNino": 0.85,
           "baseNino": "Disney junior, Ghibli niño, teamLab niño; el resto son experiencias privadas.",
           "fuentes": [
@@ -1692,7 +1692,7 @@ window.PRECIOS = {
         {
           "clave": "gestion",
           "nombre": "Gestión y soporte",
-          "adulto": 11600,
+          "adulto": 9900,
           "factorNino": 0.8,
           "baseNino": "Reservas, cambios, atención 24/7; el niño requiere menos gestión individual.",
           "fuentes": [
@@ -3069,11 +3069,11 @@ window.PRECIOS = {
       },
       {
         "titulo": "−28.6% de costo por día",
-        "detalle": "$6,701 contra $9,388 por persona y día."
+        "detalle": "$6,701 contra $9,389 por persona y día."
       },
       {
         "titulo": "El mismo dinero",
-        "detalle": "$562,860 el grupo contra $563,255 de la clase alta; $150,000 por adulto en ambos."
+        "detalle": "$562,860 el grupo contra $563,340 de la clase alta; $150,000 por adulto en ambos."
       },
       {
         "titulo": "Un solo sentido",
@@ -3137,13 +3137,13 @@ window.PRECIOS = {
       },
       {
         "indicador": "Total grupo 3+1",
-        "alta": "$563,255",
+        "alta": "$563,340",
         "asia": "$562,860",
-        "diferencia": "−$395"
+        "diferencia": "−$480"
       },
       {
         "indicador": "Costo por día por persona",
-        "alta": "$9,388",
+        "alta": "$9,389",
         "asia": "$6,701",
         "diferencia": "−28.6%"
       },
