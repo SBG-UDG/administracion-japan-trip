@@ -265,7 +265,7 @@
           <thead><tr><th>Tramo</th><th>Aerolínea</th><th>Escalas / duración</th><th>Precio</th></tr></thead>
           <tbody>${flightRows}</tbody>
         </table>
-        <p class="flight-note">${p.id === "turista" ? "No existe GDL–Tokio sin escala. La tarifa más barata tiene 1 escala en Vancouver; hay opciones de 2 escalas y 34–41 h por USD 50–100 menos." : p.id === "asia" ? "El regreso sale de Singapur: open jaw, no ida y vuelta a Tokio. Los tramos regionales son directos; el largo va en premium economy. La tarifa se construye tramo por tramo y se compra como open jaw + regionales." : "La tarifa incluye equipaje documentado. El niño de 12 paga tarifa adulta; no hay descuento infantil a esa edad."}</p>
+        <p class="flight-note">${p.id === "turista" ? "No existe GDL–Tokio sin escala. La tarifa más barata tiene 1 escala en Vancouver; hay opciones de 2 escalas y 34–41 h, pero la diferencia de precio no compensa el desgaste con un niño." : p.id === "asia" ? "El regreso sale de Singapur: open jaw, no ida y vuelta a Tokio. Los tramos regionales son directos; el largo va en premium economy. La tarifa se construye tramo por tramo y se compra como open jaw + regionales." : "La tarifa incluye equipaje documentado. El niño de 12 paga tarifa adulta; no hay descuento infantil a esa edad."}</p>
         <details class="flight-breakdown">
           <summary class="link-btn">Ver cómo se arma la tarifa</summary>
           <table class="flight-table" style="margin-top:.5rem">

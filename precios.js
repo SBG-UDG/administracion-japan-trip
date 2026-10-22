@@ -3233,7 +3233,7 @@ window.PRECIOS = {
     },
     {
       "titulo": "Temporada y clima",
-      "que": "Febrero es temporada baja, pero hace frío (máx. 10 °C, mín. 2 °C) y puede nevar. El Año Nuevo chino cae el 6 de febrero; el viaje empieza el 15. Si se mueve a marzo o abril (temporada alta), el hotel y el vuelo suben.",
+      "que": "Febrero es temporada baja, pero hace frío (máx. 10 °C, mín. 2 °C) y puede nevar. El Año Nuevo chino cae a principios de febrero; el viaje empieza el 15. Si se mueve a marzo o abril (temporada alta), el hotel y el vuelo suben.",
       "hace": "Ventana después del Año Nuevo chino y antes de la floración del cerezo; capas, calzado impermeable y plan B indoor para el niño.",
       "numero": "15% de días con lluvia o nieve en febrero (Japan Guide)."
     },

@@ -171,7 +171,7 @@ Eso gana más puntos que inventar.
 - **¿Por qué el Asia cuesta lo mismo que la alta?** Porque la banda es la restricción. Baja comodidad por destino para comprar más días y países: ejecutiva → premium economy, 4* superior → 4*, guía privado → guías locales, una base → cinco.
 - **¿Qué visa necesita cada país?** Japón y Singapur no; Corea K-ETA; Vietnam e-visa USD 25; Tailandia visa USD 40 desde el 15/09/2026. Todo con fecha en fuentes.
 - **¿Qué pasa si sube el yen?** Precio en pesos; parte terrestre se recalcula con el FIX de Banxico del día de pago, tope 10%. Un +10% mueve $7,800 / $17,700 / $22,400 / $27,900 el grupo, según el producto.
-- **¿Por qué febrero?** Temporada baja, 10 °C de máxima y 2 °C de mínima, ciruelo, después del Año Nuevo chino (6/02) y antes del cerezo y la Golden Week. La tarifa más barata de Kayak es de febrero.
+- **¿Por qué febrero?** Temporada baja, 10 °C de máxima y 2 °C de mínima, ciruelo, después del Año Nuevo chino y antes del cerezo y la Golden Week. La tarifa más barata de Kayak es de febrero.
 - **¿Qué pasa si falla la red?** Se presenta desde la copia local y el PDF. El sitio no usa CDNs ni backend.
 
 ---
