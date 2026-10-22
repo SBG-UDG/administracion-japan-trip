@@ -2699,7 +2699,7 @@ window.PRECIOS = {
         "Vuelos en clase ejecutiva: el Asia va en premium economy en los tramos largos.",
         "Hotel 5*: 4* en todas las ciudades.",
         "Propinas, compras y spa.",
-        "Actividades opcionales (masajes, rooftop, etc.).",
+        "Actividades opcionales (masajes, azotea, etc.).",
         "Cambios de fecha o de nombre después de emitir.",
         "Si Tailandia niega la visa, el plan no se puede operar; se devuelve la parte no incurrida."
       ],
@@ -3095,7 +3095,7 @@ window.PRECIOS = {
       },
       {
         "titulo": "Una base → cinco bases",
-        "detalle": "Más maletas, más traslados, más check-in y más fatiga con un niño de 12."
+        "detalle": "Más maletas, más traslados, más registros de llegada y más fatiga con un niño de 12."
       },
       {
         "titulo": "Tokio 14 → 6 noches",
@@ -3259,7 +3259,7 @@ window.PRECIOS = {
       "titulo": "Fatiga con un niño de 12",
       "que": "El Asia tiene cinco bases y seis vuelos en 21 días.",
       "hace": "Días de descanso después de cada vuelo, hoteles cerca del metro y un día libre en cada ciudad. Si el cliente prioriza descanso, se recomienda la clase alta.",
-      "numero": "20 noches, 5 check-in, 6 vuelos."
+      "numero": "20 noches, 5 registros de llegada, 6 vuelos."
     }
   ],
   "faq": [
@@ -3289,7 +3289,7 @@ window.PRECIOS = {
     },
     {
       "p": "¿Por qué el Asia cuesta lo mismo que la clase alta?",
-      "r": "Porque la banda del brief es $150,000 ± $15,000 por adulto. El Asia gasta ese mismo dinero en 21 días y cinco países: baja de ejecutiva a premium economy, de 4* superior a 4*, de guía privado a guías locales y de una base a cinco. Es otro producto, no un upgrade."
+      "r": "Porque la banda del encargo es $150,000 ± $15,000 por adulto. El Asia gasta ese mismo dinero en 21 días y cinco países: baja de ejecutiva a premium economy, de 4* superior a 4*, de guía privado a guías locales y de una base a cinco. Es otro producto, no una mejora."
     },
     {
       "p": "¿Qué pasa si sube el yen?",
@@ -3309,7 +3309,7 @@ window.PRECIOS = {
     },
     {
       "p": "¿Es seguro viajar con un niño de 12?",
-      "r": "Tokio es una de las ciudades más seguras del mundo para caminar de noche. El riesgo real es la fatiga y el clima, no la seguridad. En el Asia, el riesgo es logístico: cinco check-in y tres visas. Por eso el paquete alto es la recomendación si el niño se cansa."
+      "r": "Tokio es una de las ciudades más seguras del mundo para caminar de noche. El riesgo real es la fatiga y el clima, no la seguridad. En el Asia, el riesgo es logístico: cinco registros de llegada y tres visas. Por eso el paquete alto es la recomendación si el niño se cansa."
     }
   ],
   "creditos": {

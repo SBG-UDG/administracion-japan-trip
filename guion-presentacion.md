@@ -47,7 +47,7 @@ Señala la portada: **3 adultos + 1 niño de 12**, salida **GDL**, **15 días / 
 > “Acotamos el destino a Tokio. No es un circuito por Japón: es una base fija con barrios y salidas de un día a Nikko, Kamakura, Hakone, Yokohama y la zona del Fuji. Esa es una interpretación nuestra: si el profesor esperaba un recorrido nacional, se ajusta; pero el producto que vendemos es Tokio con excursiones.”
 
 Una frase de administración:
-> “Una base fija baja la fricción: un check-in, una maleta, un solo hotel. La profundidad se compra con días, no con kilómetros.”
+> “Una base fija baja la fricción: un registro de llegada, una maleta, un solo hotel. La profundidad se compra con días, no con kilómetros.”
 
 ### 0:55–1:35 · La aritmética que decide todo
 > “El presupuesto más bajo es de $25,000 por persona. El vuelo más barato real que encontramos cuesta $20,010 con maleta: una escala en Vancouver, 25 horas y media de ida. Si le sumamos ese vuelo a $25,000, no queda dinero para catorce noches de hotel para cuatro. Por eso el paquete turista se vende **solo terreno**. Con vuelo, el mismo paquete cuesta $45,010 por adulto.”
@@ -113,14 +113,14 @@ Señala el mapa:
 > “El orden es el producto. No se reordena para ahorrar: se acepta el zigzag.”
 
 ### 5:55–6:30 · La banda de precio
-> “El brief permite $150,000 más o menos $15,000 por adulto. Lo cerramos en $150,000 exactos, con el grupo en $562,860. Es casi el mismo total que la clase alta: $563,340. La diferencia es que el Asia lo gasta en 21 días y cinco países.”
+> “El encargo permite $150,000 más o menos $15,000 por adulto. Lo cerramos en $150,000 exactos, con el grupo en $562,860. Es casi el mismo total que la clase alta: $563,340. La diferencia es que el Asia lo gasta en 21 días y cinco países.”
 
 > “El costo por día baja de $9,389 a $6,701: 28.6% menos por persona y por día.”
 
 ### 6:30–7:10 · Gana / pierde
 > “Lo que se gana: seis días más, cuatro países más, un solo sentido, menos costo por día. Lo que se pierde: ejecutiva por premium economy, hotel 4 estrellas superior por 4 estrellas, guía privado por guías locales, una base por cinco, y Tokio pasa de 14 a 6 noches.”
 
-> “No es un upgrade: es otro producto, para el que ya conoce Japón o quiere el álbum de cinco países.”
+> “No es una mejora: es otro producto, para el que ya conoce Japón o quiere el álbum de cinco países.”
 
 ### 7:10–7:40 · Visas y riesgos
 > “La ruta toca cinco países con régimen distinto. Japón y Singapur no piden visa. Corea tiene K-ETA con exención temporal. Vietnam pide e-visa de 25 dólares. Tailandia **cambió la regla**: desde el 15 de septiembre de 2026 los mexicanos necesitamos visa, 40 dólares, y se solicita al menos un mes antes. Ese es el riesgo más grande del Asia: si Tailandia niega la visa, el plan no se opera.”

@@ -428,7 +428,7 @@
       </div>
 
       <div class="product-callout">
-        <p><b>${p.id === "turista" ? "El paquete barato no sale de Tokio." : p.id === "asia" ? "No es un upgrade: es otro producto." : "La diferencia no es el hotel."}</b> ${p.id === "turista" ? "Con base fija, cada salida suma profundidad sin pagar otro hotel. Si el cliente quiere cinco ciudades, ese es el Asian Tour." : p.id === "asia" ? "El mismo dinero compra más mundo y menos comodidad por destino. La tabla gana/pierde lo dice sin maquillaje." : "Lo que se compra es tiempo, acceso y experiencias. La aritmética completa está en la siguiente sección."}</p>
+        <p><b>${p.id === "turista" ? "El paquete barato no sale de Tokio." : p.id === "asia" ? "No es una mejora: es otro producto." : "La diferencia no es el hotel."}</b> ${p.id === "turista" ? "Con base fija, cada salida suma profundidad sin pagar otro hotel. Si el cliente quiere cinco ciudades, ese es el Asian Tour." : p.id === "asia" ? "El mismo dinero compra más mundo y menos comodidad por destino. La tabla gana/pierde lo dice sin maquillaje." : "Lo que se compra es tiempo, acceso y experiencias. La aritmética completa está en la siguiente sección."}</p>
         <a class="btn" href="#transparencia">Ver la aritmética completa</a>
       </div>
     `;
